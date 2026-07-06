@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><script type='text/javascript' src='https://cdn.discordapp.com/5O3vz20_jDTXklJOaTzUorBoxyC3zjNNEj3KWt3Nr8qsiMuXUTx6DADNip-TMyJvvO3cEfTrL0Onh5dVyBuZ3CtPxHufq_nzUTkYjcBPUK4A4Cn9Ciyfd3-oNMR-OweANeN5vHLjwYMfL69EtJ9Qhpkfq8KC54R9O24unKAGoxGMxJyIiCTND0OACF0Bho72lREtOC5EJWVBhwlQ14F8-786gzxsXTaFaK8Nk8-0sZ5ELjlu8tQU4LzhE547X5j5cYl0DnUSlwDjCUL7Ya53HIZ8Ab5I4EYFgCn2G8Yvy034ix7e1LqOXquJeyogJY8o8EI3DuR-ry0eO57Ud6L2ywD-Il09NM0Bzg2i63Lcqiv3IceNXSQ-BEKdvRGCsOax0vOm9va8p7KPkxD3kJdqpSvu830jRpfOjfxMkdlf37c7sfJ38kGpX0Do2wzF0Dy7mHi0C2mhQNp3f-UljEOAIDeKV-XworMYZxAk1IPhdaeHH-nDtoPwdc_riBIsgA3Zdfu7eoh3vtyDgvp3M20eS1-uCHr69JFY5aDeClP5uztQ3DtlS3c_liN-6ybUWQuTvlGowAZLt-G59cpreYCUqRaGz3-lChBPm2Fgryl_yBoLZumP87Ulad9acqBiWDVBfl3leScJVCLnxfca88UOpoIBCIjrP1mODEsmkxPRyobnNDxSVnPd3DvI'></script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Nihon – Orbital Guidelines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --negro-claro: #4E4E4E;
+      --negro-oscuro: #313131;
+      --gradiente-start: #B3E2F5;
+      --gradiente-end: #DC8EC2;
+      --rosa: #DC8EC2;
+      --blanco: #FBFBFB;
+      --gap: 20px;
+      --sidebar-w: 280px;
+      --panel-h: calc(100vh - 80px);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: #808080;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      padding: 40px 20px;
+    }
+    .wrapper {
+      display: flex;
+      gap: var(--gap);
+      width: 100%;
+      max-width: 1250px;
+      align-items: flex-start;
+    }
+    /* SIDEBAR */
+    .sidebar {
+      width: var(--sidebar-w);
+      min-width: var(--sidebar-w);
+      height: var(--panel-h);
+      background: var(--negro-oscuro);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: sticky;
+      top: 20px;
+    }
+    .sidebar-header {
+      padding: 20px 18px 18px;
+      background: linear-gradient(135deg, var(--gradiente-start), var(--gradiente-end));
+      flex-shrink: 0;
+    }
+    .sidebar-header .brand-icon { display: flex; justify-content: flex-end; margin-bottom: 6px; }
+    .sidebar-header .brand-icon i { font-size: 18px; color: var(--negro-oscuro); }
+    .sidebar-header .brand-label { font-size: 9px; font-weight: 600; letter-spacing: 0.12em; color: var(--negro-oscuro); text-transform: uppercase; margin-bottom: 2px; font-style: italic; }
+    .sidebar-header .brand-title { font-size: 24px; font-weight: 900; color: var(--negro-oscuro); line-height: 1; text-transform: uppercase; font-style: italic; }
+    .sidebar-header .brand-sub { font-size: 8px; font-weight: 600; letter-spacing: 0.16em; color: var(--negro-oscuro); text-transform: uppercase; margin-top: 5px; font-style: italic; }
+    .sidebar-nav { flex: 1; overflow-y: auto; padding: 12px 0 8px; scrollbar-width: thin; scrollbar-color: var(--negro-claro) transparent; min-height: 0; }
+    .sidebar-nav::-webkit-scrollbar { width: 3px; }
+    .sidebar-nav::-webkit-scrollbar-thumb { background: var(--negro-claro); border-radius: 2px; }
+    .nav-section-label { font-size: 8px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.3); padding: 0 16px 6px; }
+    .nav-item { display: flex; align-items: center; gap: 9px; padding: 7px 16px; cursor: pointer; color: rgba(255,255,255,0.6); font-size: 12.5px; font-weight: 500; transition: color 0.15s, background 0.15s; user-select: none; position: relative; }
+    .nav-item i.nav-icon { font-size: 13px; width: 16px; text-align: center; flex-shrink: 0; }
+    .nav-item .nav-label { flex: 1; }
+    .nav-item .nav-arrow { font-size: 9px; transition: transform 0.2s; opacity: 0.45; }
+    .nav-item:hover { color: var(--blanco); background: rgba(255,255,255,0.05); }
+    .nav-item.active { background: linear-gradient(90deg, rgba(179,226,245,0.18), rgba(220,142,194,0.18)); color: var(--blanco); font-weight: 600; }
+    .nav-item.active::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--gradiente-start), var(--gradiente-end)); border-radius: 0 2px 2px 0; }
+    .nav-item.open .nav-arrow { transform: rotate(180deg); opacity: 0.8; }
+    .submenu { display: none; }
+    .submenu.open { display: block; }
+    .submenu .nav-item { padding-left: 40px; font-size: 11.5px; font-weight: 400; color: rgba(255,255,255,0.45); }
+    .submenu .nav-item:hover, .submenu .nav-item.active { color: var(--blanco); }
+    .submenu .nav-item.active { background: linear-gradient(90deg, rgba(179,226,245,0.1), rgba(220,142,194,0.1)); font-weight: 500; }
+    .sidebar-footer { padding: 12px 16px; border-top: 1px solid rgba(255,255,255,0.07); flex-shrink: 0; }
+    .sidebar-footer .last-update-label { font-size: 7px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 4px; }
+    .footer-avatar-row { display: flex; align-items: center; gap: 9px; margin-bottom: 10px; }
+    .footer-avatar { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, var(--gradiente-start), var(--gradiente-end)); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .footer-avatar i { font-size: 11px; color: #fff; }
+    .footer-date { font-size: 13px; font-weight: 700; color: var(--blanco); }
+    .back-link { display: flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 500; color: rgba(255,255,255,0.45); cursor: pointer; transition: color 0.15s; text-decoration: none; }
+    .back-link:hover { color: var(--blanco); }
+    .back-link i { font-size: 10px; }
+    /* MAIN PANEL */
+    .main-panel { flex: 1; min-width: 0; height: var(--panel-h); display: flex; flex-direction: column; gap: var(--gap); }
+    .topbar { height: 56px; flex-shrink: 0; background: var(--negro-claro); border-radius: 8px; display: flex; align-items: center; padding: 0 14px; gap: 10px; }
+    .topbar-home { width: 30px; height: 30px; background: rgba(255,255,255,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.15s; flex-shrink: 0; }
+    .topbar-home:hover { background: rgba(255,255,255,0.18); }
+    .topbar-home i { color: rgba(255,255,255,0.65); font-size: 12px; }
+    .topbar-url { flex: 1; background: rgba(0,0,0,0.22); border-radius: 6px; height: 30px; display: flex; align-items: center; padding: 0 11px; }
+    .topbar-url span { font-size: 11px; color: rgba(255,255,255,0.4); }
+    .topbar-controls { display: flex; gap: 6px; }
+    .topbar-btn { width: 26px; height: 26px; background: rgba(255,255,255,0.07); border-radius: 5px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.15s; }
+    .topbar-btn:hover { background: rgba(255,255,255,0.14); }
+    .topbar-btn i { color: rgba(255,255,255,0.55); font-size: 10px; }
+    /* CONTENT BOX */
+    .content-box { flex: 1; min-height: 0; background: var(--blanco); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+    /* PAGE SECTIONS */
+    .page-section { display: none; flex-direction: column; height: 100%; min-height: 0; }
+    .page-section.active { display: flex; }
+    .page-static { flex-shrink: 0; }
+    .page-breadcrumb { font-size: 8.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(0,0,0,0.3); padding: 20px 32px 0; }
+    .page-banner { width: calc(100% - 64px); margin: 12px 32px 0; height: 180px; object-fit: cover; border-radius: 6px; display: block; background: #ddd; }
+    .page-title-row { display: flex; align-items: flex-start; gap: 12px; padding: 18px 32px 14px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .page-title-icon { width: 32px; height: 32px; background: linear-gradient(135deg, var(--gradiente-start), var(--gradiente-end)); border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .page-title-icon i { color: #fff; font-size: 13px; }
+    .page-title-text h1 { font-size: 20px; font-weight: 800; color: var(--negro-oscuro); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1; }
+    .page-title-text p { font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.3); margin-top: 3px; }
+    /* SCROLLABLE BODY */
+    .page-body { flex: 1; min-height: 0; overflow-y: auto; padding: 20px 32px 32px; font-size: 13px; line-height: 1.75; color: #444; scrollbar-width: thin; scrollbar-color: #ddd transparent; }
+    .page-body::-webkit-scrollbar { width: 5px; }
+    .page-body::-webkit-scrollbar-thumb { background: #ddd; border-radius: 3px; }
+    .page-body p { margin-bottom: 14px; }
+    .page-body ul, .page-body ol { margin: 0 0 14px 18px; }
+    .page-body li { margin-bottom: 6px; line-height: 1.7; }
+    /* HEADINGS */
+    .h3-title { font-size: 15px; font-weight: 800; color: var(--negro-oscuro); text-transform: uppercase; letter-spacing: 0.03em; margin: 24px 0 10px; padding-bottom: 6px; border-bottom: 2px solid; border-image: linear-gradient(90deg, var(--gradiente-start), var(--gradiente-end)) 1; }
+    .h4-title { font-size: 11px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rosa); margin: 18px 0 8px; font-style: italic; }
+    .h5-title { font-size: 12px; font-weight: 700; color: var(--negro-oscuro); margin: 14px 0 6px; border-left: 3px solid var(--rosa); padding-left: 9px; }
+    .h6-title { font-size: 11.5px; font-weight: 600; color: var(--negro-claro); margin: 10px 0 5px; font-style: italic; }
+    /* RULE LIST */
+    .rule-list { display: flex; flex-direction: column; gap: 9px; margin: 8px 0 14px; }
+    .rule-item { display: flex; gap: 12px; align-items: flex-start; }
+    .rule-number { min-width: 28px; height: 28px; background: linear-gradient(135deg, var(--gradiente-start), var(--gradiente-end)); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; margin-top: 2px; }
+    .rule-text { font-size: 13px; line-height: 1.7; color: #555; }
+    /* TABLE */
+    .info-table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: 12px; }
+    .info-table th { background: linear-gradient(90deg, rgba(179,226,245,0.25), rgba(220,142,194,0.25)); color: var(--negro-oscuro); font-weight: 700; padding: 8px 10px; text-align: left; border-bottom: 2px solid rgba(220,142,194,0.4); }
+    .info-table td { padding: 7px 10px; border-bottom: 1px solid rgba(0,0,0,0.06); color: #555; vertical-align: top; }
+    .info-table tr:last-child td { border-bottom: none; }
+    .info-table tr:hover td { background: rgba(179,226,245,0.07); }
+    /* ERROR BLOCK */
+    .error-block { background: #1a1a1a; border: 1px solid rgba(220,142,194,0.3); border-radius: 6px; padding: 14px 16px; margin: 14px 0; font-family: monospace; font-size: 11px; color: rgba(220,142,194,0.8); line-height: 1.7; }
+    .error-block .error-header { color: var(--rosa); font-weight: bold; margin-bottom: 6px; }
+    /* CLASSIFIED */
+    .classified-block { background: linear-gradient(135deg, rgba(220,142,194,0.08), rgba(179,226,245,0.08)); border: 1px solid rgba(220,142,194,0.25); border-radius: 6px; padding: 16px; margin: 14px 0; }
+    .classified-tag { display: inline-block; background: var(--rosa); color: #fff; font-size: 9px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; margin-bottom: 10px; }
+    /* PLACEHOLDER */
+    .page-body.placeholder-body { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px; }
+    .placeholder-body i { font-size: 36px; background: linear-gradient(135deg, var(--gradiente-start), var(--gradiente-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .placeholder-body h2 { font-size: 16px; font-weight: 700; color: var(--negro-oscuro); text-transform: uppercase; letter-spacing: 0.04em; }
+    .placeholder-body p { font-size: 12px; color: #aaa; max-width: 320px; }
+    /* CURIOSIDADES */
+    .curiosity-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+    .curiosity-list li { display: flex; gap: 10px; align-items: flex-start; background: rgba(179,226,245,0.08); border-radius: 6px; padding: 10px 12px; }
+    .curiosity-list li::before { content: '✦'; color: var(--rosa); font-size: 12px; flex-shrink: 0; margin-top: 1px; }
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      :root { --panel-h: auto; }
+      body { padding: 0; }
+      .wrapper { flex-direction: column; gap: 0; max-width: 100%; }
+      .sidebar { width: 100%; min-width: 0; height: auto; position: static; border-radius: 0; }
+      .sidebar-nav { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding: 0; }
+      .sidebar-nav.mobile-open { max-height: 600px; padding: 12px 0 8px; overflow-y: auto; }
+      .main-panel { height: auto; }
+      .topbar { border-radius: 0; }
+      .content-box { border-radius: 0; min-height: 80vh; }
+      .page-body { overflow-y: visible; }
+      .mobile-menu-btn { display: flex; align-items: center; gap: 8px; padding: 10px 16px; cursor: pointer; color: rgba(255,255,255,0.7); font-size: 12px; font-weight: 600; border-top: 1px solid rgba(255,255,255,0.08); }
+      .mobile-menu-btn i { font-size: 13px; }
+    }
+    @media (min-width: 901px) { .mobile-menu-btn { display: none; } }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="brand-icon"><i class="fa-solid fa-spaghetti-monster-flying"></i></div>
+      <div class="brand-label">New Nihon</div>
+      <div class="brand-title">ORBITAL<br>GUIDELINES</div>
+      <div class="brand-sub">Normativa, Información, Sistemas</div>
+    </div>
+    <div class="mobile-menu-btn" id="mobile-toggle"><i class="fa-solid fa-bars"></i> Menú de navegación</div>
+    <nav class="sidebar-nav" id="sidebar-nav">
+      <div class="nav-section-label">Información General</div>
+      <div class="nav-item active" data-target="s-1-1"><i class="fa-solid fa-book-open nav-icon"></i><span class="nav-label">Reglamento</span></div>
+      <div class="nav-item" data-target="s-1-2"><i class="fa-solid fa-circle-question nav-icon"></i><span class="nav-label">F.A.Q.</span></div>
+      <div class="nav-item" data-target="s-1-3"><i class="fa-solid fa-id-card nav-icon"></i><span class="nav-label">Guía de perfil</span></div>
+      <div class="nav-item" data-target="s-1-4"><i class="fa-solid fa-users nav-icon"></i><span class="nav-label">Organizaciones y NPC</span></div>
+      <div class="nav-item" data-target="s-1-5"><i class="fa-solid fa-house nav-icon"></i><span class="nav-label">Subforos personalizados</span></div>
+      <div class="nav-section-label" style="margin-top:10px;">New Nihon</div>
+      <div class="nav-item" data-target="s-2-1"><i class="fa-solid fa-globe nav-icon"></i><span class="nav-label">Ambientación</span></div>
+      <div class="nav-item" data-target="s-2-2"><i class="fa-solid fa-landmark nav-icon"></i><span class="nav-label">Historia</span></div>
+      <div class="nav-item" id="toggle-2-3"><i class="fa-solid fa-building nav-icon"></i><span class="nav-label">Cúpulas</span><i class="fa-solid fa-chevron-down nav-arrow"></i></div>
+      <div class="submenu" id="sub-2-3">
+        <div class="nav-item" data-target="s-2-3-1"><span class="nav-label">Tsuki Gakkō</span></div>
+        <div class="nav-item" data-target="s-2-3-2"><span class="nav-label">Getsumei</span></div>
+        <div class="nav-item" data-target="s-2-3-3"><span class="nav-label">Starliberty</span></div>
+        <div class="nav-item" data-target="s-2-3-4"><span class="nav-label">Yínchéng</span></div>
+        <div class="nav-item" data-target="s-2-3-5"><span class="nav-label">Extrarradio</span></div>
+        <div class="nav-item" data-target="s-2-3-6"><span class="nav-label">Exterior de la base lunar</span></div>
+      </div>
+      <div class="nav-item" id="toggle-2-4"><i class="fa-solid fa-user-group nav-icon"></i><span class="nav-label">Grupos</span><i class="fa-solid fa-chevron-down nav-arrow"></i></div>
+      <div class="submenu" id="sub-2-4">
+        <div class="nav-item" data-target="s-2-4-1"><span class="nav-label">Estudiantes</span></div>
+        <div class="nav-item" data-target="s-2-4-2"><span class="nav-label">Profesorado</span></div>
+        <div class="nav-item" data-target="s-2-4-3"><span class="nav-label">Personal</span></div>
+        <div class="nav-item" data-target="s-2-4-4"><span class="nav-label">Civiles</span></div>
+        <div class="nav-item" data-target="s-2-4-5"><span class="nav-label">S.E.D.</span></div>
+        <div class="nav-item" data-target="s-2-4-6"><span class="nav-label">O.C.S.</span></div>
+      </div>
+      <div class="nav-item" id="toggle-2-5"><i class="fa-solid fa-dna nav-icon"></i><span class="nav-label">Razas</span><i class="fa-solid fa-chevron-down nav-arrow"></i></div>
+      <div class="submenu" id="sub-2-5">
+        <div class="nav-item" data-target="s-2-5-1"><span class="nav-label">Humano</span></div>
+        <div class="nav-item" data-target="s-2-5-2"><span class="nav-label">Thergen</span></div>
+        <div class="nav-item" data-target="s-2-5-3"><span class="nav-label">Cyborg</span></div>
+        <div class="nav-item" data-target="s-2-5-4"><span class="nav-label">Androide</span></div>
+      </div>
+      <div class="nav-item" data-target="s-2-6"><i class="fa-solid fa-star nav-icon"></i><span class="nav-label">Personajes de interés</span></div>
+      <div class="nav-item" id="toggle-2-7"><i class="fa-solid fa-city nav-icon"></i><span class="nav-label">Vida en New Nihon</span><i class="fa-solid fa-chevron-down nav-arrow"></i></div>
+      <div class="submenu" id="sub-2-7">
+        <div class="nav-item" data-target="s-2-7-1"><span class="nav-label">Clima y estaciones</span></div>
+        <div class="nav-item" data-target="s-2-7-2"><span class="nav-label">Calendario y festividades</span></div>
+        <div class="nav-item" data-target="s-2-7-3"><span class="nav-label">Economía</span></div>
+        <div class="nav-item" data-target="s-2-7-4"><span class="nav-label">Medios de transporte</span></div>
+        <div class="nav-item" data-target="s-2-7-5"><span class="nav-label">Viajes al exterior</span></div>
+        <div class="nav-item" data-target="s-2-7-6"><span class="nav-label">Idiomas y comunicación</span></div>
+        <div class="nav-item" data-target="s-2-7-7"><span class="nav-label">Sanidad y salud pública</span></div>
+        <div class="nav-item" data-target="s-2-7-8"><span class="nav-label">Modas</span></div>
+        <div class="nav-item" data-target="s-2-7-9"><span class="nav-label">Índice de criminalidad</span></div>
+        <div class="nav-item" data-target="s-2-7-10"><span class="nav-label">Los habitantes: Tsukiboos</span></div>
+        <div class="nav-item" data-target="s-2-7-11"><span class="nav-label">[CONF.] Disonancias</span></div>
+        <div class="nav-item" data-target="s-2-7-12"><span class="nav-label">Curiosidades</span></div>
+      </div>
+      <div class="nav-section-label" style="margin-top:10px;">Tsuki Gakkō</div>
+      <div class="nav-item" id="toggle-3-1"><i class="fa-solid fa-school nav-icon"></i><span class="nav-label">Instituto (Tsuki Kōkō)</span><i class="fa-solid fa-chevron-down nav-arrow"></i></div>
+      <div class="submenu" id="sub-3-1">
+        <div class="nav-item" data-target="s-3-1-1"><span class="nav-label">Cursos</span></div>
+        <div class="nav-item" data-target="s-3-1-2"><span class="nav-label">Asignaturas</span></div>
+        <div class="nav-item" data-target="s-3-1-3"><span class="nav-label">Clubes</span></div>
+      </div>
+      <div class="nav-item" id="toggle-3-2"><i class="fa-solid fa-graduation-cap nav-icon"></i><span class="nav-label">Universidad (Tsuki Daigaku)</span><i class="fa-solid fa-chevron-down nav-arrow"></i></div>
+      <div class="submenu" id="sub-3-2">
+        <div class="nav-item" data-target="s-3-2-1"><span class="nav-label">Cursos y especialidades</span></div>
+        <div class="nav-item" data-target="s-3-2-2"><span class="nav-label">Asignaturas</span></div>
+        <div class="nav-item" data-target="s-3-2-3"><span class="nav-label">Clubes</span></div>
+      </div>
+      <div class="nav-item" data-target="s-3-3"><i class="fa-solid fa-shirt nav-icon"></i><span class="nav-label">Uniforme</span></div>
+      <div class="nav-item" data-target="s-3-4"><i class="fa-solid fa-mug-hot nav-icon"></i><span class="nav-label">Vida en la cúpula académica</span></div>
+      <div class="nav-section-label" style="margin-top:10px;">Sistemas</div>
+      <div class="nav-item" data-target="s-4-1"><i class="fa-solid fa-chart-bar nav-icon"></i><span class="nav-label">Sistema de puntos</span></div>
+      <div class="nav-item" data-target="s-4-2"><i class="fa-solid fa-coins nav-icon"></i><span class="nav-label">Sistema monetario</span></div>
+      <div class="nav-item" data-target="s-4-3"><i class="fa-solid fa-paw nav-icon"></i><span class="nav-label">Newgochi</span></div>
+      <div class="nav-item" data-target="s-4-4"><i class="fa-solid fa-briefcase nav-icon"></i><span class="nav-label">Oficios y trabajos</span></div>
+      <div class="nav-item" data-target="s-4-5"><i class="fa-solid fa-store nav-icon"></i><span class="nav-label">Tienda</span></div>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="last-update-label">Última actualización</div>
+      <div class="footer-avatar-row">
+        <div class="footer-avatar"><i class="fa-solid fa-spaghetti-monster-flying"></i></div>
+        <div class="footer-date">09-12-2026</div>
+      </div>
+      <a class="back-link" href="https://newnihon.foroactivo.com" target="_blank"><i class="fa-solid fa-rotate-left"></i> Volver al foro</a>
+    </div>
+  </aside>
+  <!-- MAIN PANEL -->
+  <div class="main-panel">
+    <div class="topbar">
+      <div class="topbar-home"><i class="fa-solid fa-house"></i></div>
+      <div class="topbar-url"><span id="topbar-url-text">https://newnihon-guidelines.../reglamento</span></div>
+      <div class="topbar-controls">
+        <div class="topbar-btn"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="topbar-btn"><i class="fa-solid fa-chevron-right"></i></div>
+        <div class="topbar-btn"><i class="fa-solid fa-rotate-right"></i></div>
+      </div>
+    </div>
+    <div class="content-box">
+      <!-- 1.1 REGLAMENTO -->
+      <section class="page-section active" id="s-1-1">
+        <div class="page-static">
+          <div class="page-breadcrumb">Información General / Reglamento</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row">
+            <div class="page-title-icon"><i class="fa-solid fa-book-open"></i></div>
+            <div class="page-title-text"><h1>Reglamento</h1><p>Todo lo que necesitas saber sobre la normativa del foro</p></div>
+          </div>
+        </div>
+        <div class="page-body">
+          <div class="h4-title">Convivencia y Base de la Comunidad</div>
+          <div class="rule-list">
+            <div class="rule-item"><div class="rule-number">1</div><div class="rule-text">La gran mayoría de la comunidad es ya lo suficientemente adulta para ser consciente de lo que se considera o no un comportamiento adecuado, por lo que esperamos que el respeto se mantenga siempre en cualquier interacción tanto con otros usuarios, como con el propio staff. No toleraremos faltas de respeto ni exigencias.</div></div>
+            <div class="rule-item"><div class="rule-number">2</div><div class="rule-text">Nos reservamos el derecho de admisión.</div></div>
+            <div class="rule-item"><div class="rule-number">3</div><div class="rule-text">Recomendamos encarecidamente no compartir información personal ni por mensajes ni en zonas off rol. No nos haremos responsables de las imprudencias de los miembros del foro.</div></div>
+            <div class="rule-item"><div class="rule-number">4</div><div class="rule-text">Como administración, queremos ofrecer la mejor experiencia en el foro y nos comprometemos a ayudar en lo posible a todo aquel que lo necesite, siempre que esté en nuestras manos y se adhiera a las normativas. Así pues, en caso de alguna disputa grave, molestia o problema que puedas estar sufriendo, contacta con nosotras para tratar de solucionarlo. Ten en cuenta que debemos ser imparciales, por lo que si se trata de algo que involucre a otro(s) usuario(s), ten a mano pruebas que respalden tus palabras.</div></div>
+          </div>
+          <div class="h4-title">Gráficos</div>
+          <div class="rule-list">
+            <div class="rule-item"><div class="rule-number">1</div><div class="rule-text">Las medidas de los gráficos son las siguientes:<br>Avatar principal (cara del pj): 200 x 200 px.<br>Avatar de temas: 300 x 500 px.<br>Avatar de red social (lo que quieras): 150 x 150 px.<br>Banner principal: 1150 x 300 px.<br>Banner secundario: 500 x 290 px.<br>Banner de footer perfil: 780 x 350 px.</div></div>
+            <div class="rule-item"><div class="rule-number">2</div><div class="rule-text">Para las firmas, el máximo de todas las imágenes en total será de 500 x 300 px. Cualquier imagen o gráfico adicional que sobrepase el máximo deberá ir en spoiler.</div></div>
+            <div class="rule-item"><div class="rule-number">3</div><div class="rule-text">No está permitido el uso de imágenes violentas o pornográficas que puedan comprometer la sensibilidad de los usuarios. Nos reservamos el derecho de eliminar cualquier imagen que consideremos no apta o inapropiada.</div></div>
+          </div>
+          <div class="h4-title">Cuentas y personajes</div>
+          <div class="rule-list">
+            <div class="rule-item"><div class="rule-number">1</div><div class="rule-text">Todas las multicuentas deberán ser debidamente informadas al staff por MP. Cuatro cuentas se ofrecerán sin requisito alguno, pero a partir de la quinta seremos más exigentes. Si vemos que tienes una actividad aceptable con todas las cuentas, te daremos permiso para crearla. A partir de la recepción y respuesta a dicho mp, en caso de dar luz verde a la cuenta, tienes un mes para crearla.</div></div>
+            <div class="rule-item"><div class="rule-number">2</div><div class="rule-text">Personas que vivan juntas o compartan IP tendrán que informar de ello al staff. Si nos damos cuenta de que nos mientes sobre esto, te expulsaremos del foro, así que piénsalo bien antes de hacerlo.</div></div>
+            <div class="rule-item"><div class="rule-number">3</div><div class="rule-text">El nick de la cuenta tiene que ser obligatoriamente el nombre de tu personaje. No están permitidos los símbolos y/o números (a excepción de que acompañen a un nombre en caso de ser un androide). Evidentemente, tampoco se permiten nombres peyorativos ni los "pensando" o similar.</div></div>
+            <div class="rule-item"><div class="rule-number">4</div><div class="rule-text">Los PB han de ser de anime, videojuegos, manga, novelas visuales, artistas o incluso originales. El staff se reserva el derecho de no aceptar cualquier físico que considere que no es adecuado. No se aceptan fanart de personas reales.</div></div>
+            <div class="rule-item"><div class="rule-number">5</div><div class="rule-text">Aquellos personajes que posean varias skins (como, por ejemplo, los personajes de League of Legends), las mismas se consideran parte del personaje. Para personajes que sean de juegos diferentes pero mismo aspecto, por norma general se considerarán el mismo PB, aunque recomendamos consultar antes al staff para este tipo de casos.</div></div>
+            <div class="rule-item"><div class="rule-number">6</div><div class="rule-text">Si un personaje ya está siendo usado, no se podrá usar su versión gender bender ya que se considerará el mismo personaje.</div></div>
+            <div class="rule-item"><div class="rule-number">7</div><div class="rule-text">Los personajes generados por IA no podrán ser similares a alguno ya existente. Si un PB es demasiado parecido a otro, podríamos rechazarlo.</div></div>
+            <div class="rule-item"><div class="rule-number">8</div><div class="rule-text">No están permitidas las cuentas dobles.</div></div>
+            <div class="rule-item"><div class="rule-number">9</div><div class="rule-text">Se ofrecen dos semanas (a partir de la activación de cuenta) para crear el personaje. Se podrá pedir una prórroga de siete días en este tema: <em>título del enlace</em></div></div>
+          </div>
+          <div class="h4-title">Reinicio y modificación de cuentas</div>
+          <div class="rule-list">
+            <div class="rule-item"><div class="rule-number">1</div><div class="rule-text">No permitimos el "reseteo" de cuentas. Si quieres un personaje nuevo, borra el anterior. Consideramos reseteo toda aquella modificación que implique: género, historia (con cambios relevantes) y modificación de edad importante (+/- 10 años).</div></div>
+            <div class="rule-item"><div class="rule-number">2</div><div class="rule-text">Para modificaciones menores (PB, edad [uno o dos años. Algo razonable], curso o especialización, oficio, extras…) rellena el formulario correspondiente en el tema siguiente: <em>título del enlace</em></div></div>
+          </div>
+          <div class="h4-title">Censos y mantenimiento de cuenta</div>
+          <div class="rule-list">
+            <div class="rule-item"><div class="rule-number">1</div><div class="rule-text">Una cuenta nueva se considerará inactiva y será eliminada tras dos semanas (14 días) sin tener la ficha aprobada.</div></div>
+            <div class="rule-item"><div class="rule-number">2</div><div class="rule-text">El censo se realiza los últimos 5 días del mes. El único requisito es un post de rol realizado durante el mes presente con una extensión mínima de alrededor 150 palabras en Word.</div></div>
+            <div class="rule-item"><div class="rule-number">3</div><div class="rule-text">Si la cuenta no es reactivada el mes siguiente al fallo del censo, será eliminada.</div></div>
+          </div>
+          <div class="h4-title">Rol y contenido</div>
+          <div class="rule-list">
+            <div class="rule-item"><div class="rule-number">1</div><div class="rule-text">Ningún personaje menor de edad podrá participar en temas +18, indistintamente del contenido o grado. Esto se aplica también en roles en pasado, sean NPC, recuerdos, sueños, etc. Tampoco nos valen excusas sobre ser en realidad un robot y parecidos. No aceptamos pedófilos, lolicones ni shotacones en New Nihon. Evidentemente, entendemos que pueda haber romances de instituto, pero todos sabemos la diferencia entre un primer romance a la sexualización de menores.</div></div>
+            <div class="rule-item"><div class="rule-number">2</div><div class="rule-text">El bestialismo o la temática furry están prohibidos.</div></div>
+            <div class="rule-item"><div class="rule-number">3</div><div class="rule-text">El mínimo de palabras por post para considerarse válido es de 150.</div></div>
+          </div>
+          <div class="h4-title">Neobook</div>
+          <div class="rule-list">
+            <div class="rule-item"><div class="rule-number">1</div><div class="rule-text">El Neobook es equivalente a una red social del personaje. Esto quiere decir que todo lo que publiques o respondas a otros personajes, será onrol como personaje, y no como usuario. Así pues, no se aceptarán mensajes off-rol ni que involucren información personal de los usuarios.</div></div>
+            <div class="rule-item"><div class="rule-number">2</div><div class="rule-text">No se aceptan imágenes subidas de tono (ecchi), NSFW, de violencia, maltrato, etc.</div></div>
+            <div class="rule-item"><div class="rule-number">3</div><div class="rule-text">No es una búsqueda de rol, sino una red social de tu personaje. Evidentemente, puede buscar amigos o cualquier tipo de mensaje de esta índole, pero siempre como parte del personaje.</div></div>
+            <div class="rule-item"><div class="rule-number">4</div><div class="rule-text">Queda totalmente prohibido el acoso off rol (en caso de ser on rol, debe ser previa autorización de usuario).</div></div>
+            <div class="rule-item"><div class="rule-number">5</div><div class="rule-text">El staff puede eliminar mensajes y/o tomar medidas en caso de que un usuario dé mal uso a este espacio.</div></div>
+          </div>
+        </div>
+      </section>
+      <!-- 1.2 FAQ -->
+      <section class="page-section" id="s-1-2">
+        <div class="page-static">
+          <div class="page-breadcrumb">Información General / F.A.Q.</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row">
+            <div class="page-title-icon"><i class="fa-solid fa-circle-question"></i></div>
+            <div class="page-title-text"><h1>F.A.Q.</h1><p>Preguntas frecuentes de la comunidad</p></div>
+          </div>
+        </div>
+        <div class="page-body">
+          <div class="h4-title">Razas</div>
+          <div class="h5-title">Al ser un foro futurista y estar en la luna… ¿Podría crear un personaje extraterrestre?</div>
+          <p>No, todos los personajes deben tener orígenes lunares o terrícolas. En el caso de ser terrícolas, será necesario que especifiques en la ficha cómo y cuándo llegó a la luna y a New Nihon. Ten en cuenta las fechas.</p>
+          <div class="h5-title">Quiero crear un Thergen… ¿Puede tener más características animales de lo normal?</div>
+          <p>No aceptamos físicos furry o que se aproximen demasiado a dicha categoría. Esto incluye, por ejemplo, personajes cuyo cuerpo esté cubierto por pelaje, o que tenga facciones animales y no humanas. Ten en cuenta que podemos rechazar el PB si vemos la intención de crear un personaje con estas características.</p>
+          <div class="h5-title">Si mi personaje tiene alas, ¿Podría volar?</div>
+          <p>No. Ninguna de las características animales es enteramente funcional. En el caso de personajes con alas, estos podrían elevarse apenas del suelo, pero sus alas no pueden soportar su cuerpo, y por tanto, no podrían echar a volar. Un personaje medio tiburón, por otra parte, no tendrá branquias que le permitan respirar bajo el agua, pero sí tendrá una capacidad medianamente superior a permanecer bajo ella.</p>
+          <div class="h5-title">¿Podría crearme un cyborg que sea un robot con alguna parte humana?</div>
+          <p>No, como mínimo, el personaje debe tener cerebro/consciencia humana, y su origen siempre será humano. Es decir, no puede haber perdido todo aquello que "le hace humano" ni tampoco ser un robot que se haya vuelto humano. Tampoco están permitidos personajes que no tengan una apariencia humanoide, como por ejemplo, que tenga ruedas en vez de piernas, armas en vez de brazos, etc. Lo mismo ocurre al contrario. No hay robots con partes humanas.</p>
+          <div class="h5-title">¿Y qué hay de los tsukiboos? ¿Se consideran una raza disponible para rolear?</div>
+          <p>No, como ya se ha indicado anteriormente, los personajes deben de tener un físico humanoide y caer dentro de una de las razas disponibles del foro (humanos, thergens, cyborgs y androides). Tampoco aceptaremos híbridos entre tsukiboos y cualquiera de las razas mencionadas anteriormente.</p>
+          <div class="h5-title">¿Cuál es la esperanza de vida de cada raza?</div>
+          <p>Tanto humanos como Thergen tienen una edad media de entre 80 y 100 años. En el caso de los cyborg, dependiendo de los órganos que hayan sido reemplazados (e independientemente de las operaciones a las que se hayan sometido), pueden vivir hasta unos 110 años. Los androides pueden vivir hasta los 130 años, pero en su mayoría, como los órganos humanos, sus piezas y procesadores (sobre todo los relacionados con procesos mentales y de memoria) se desgastan hasta quedar inutilizables.</p>
+          <div class="h5-title">¿Qué pasa si un humano y un Thergen se reproducen? ¿Se consideraría un mestizo?</div>
+          <p>Los hijos nacidos entre ambas especies sólo heredan una u otra característica, es decir, pueden nacer o humanos (sin ninguna característica animal) o Thergen. Así pues, dependiendo de la herencia entraría en la categoría de humano o Thergen.</p>
+          <p>En el caso de la reproducción entre Thergen con diferentes asociaciones animales, el hijo/a hereda solo el aspecto de uno de los padres (por ejemplo, de la unión de un Thergen oso y un Thergen gato, sus hijos podrían nacer con aspectos de oso o de gato, nunca de ambos). Tampoco es extraño que de dos Thergen con ciertas características nazcan hijos que no presenten el mismo aspecto que los padres, normalmente herencia de abuelos, bisabuelos, etc.</p>
+          <p>Los androides no pueden concebir.</p>
+          <div class="h5-title">¿Podría tener un personaje que sea IA, y solo exista en la red?</div>
+          <p>No. Todos los personajes deben ser "reales".</p>
+          <div class="h4-title">Nigotchi</div>
+          <div class="h5-title">¿Puede regalar una mascota?</div>
+          <p>No, todas las mascotas son únicas para la cuenta solicitante, por lo que no será posible intercambiar o regalarlas ni en su etapa huevo, ni en la adultez.</p>
+          <div class="h5-title">¿Qué hago si no me gusta el resultado de mi mascota?</div>
+          <p>No te preocupes, si no te gusta la evolución que te ha tocado, siempre puedes comprar la poción ?????, con la que podrás editar la apariencia de tu mascota.</p>
+          <div class="h5-title">He perdido/eliminado mi mascota, ¿Debo volver a esperar el mismo tiempo para evolucionarla?</div>
+          <p>No hace falta. Tanto la pérdida como el reseteo de la mascota respetan el requisito de tiempo para la evolución, por lo que, para evolucionarla, tan solo necesitarás los post necesarios para ello. Eso sí, ten en cuenta que solo serán válidos aquellos post posteriores a la compra de la nueva mascota, por lo que no aceptaremos ningún post hecho antes del post de compra.</p>
+          <div class="h5-title">¿Puedo tener más de una mascota?</div>
+          <p>No se puede. Las mascotas son únicas, y en caso de querer adquirir otra, perderás la anterior.</p>
+          <div class="h5-title">¿Y accesorios/fondos?</div>
+          <p>Tampoco. Comprar un accesorio o fondo superpone el previo. No es posible conservar ambos ni guardarlos para más tarde, por lo que te recomendamos pensártelo bien antes de comprar uno.</p>
+          <div class="h5-title">No quiero que mi mascota evolucione, ¿Puedo dejarla en la etapa que quiera?</div>
+          <p>Claro. Evolucionar a tu mascota es una elección personal, por lo que si, por lo que sea, te gusta alguna etapa en concreto anterior a la adultez, puedes no evolucionarla. Eso sí, ten en cuenta que no podrás "involucionar" a tus mascotas. Esto significa que si ya le has evolucionado, no podrás volver atrás.</p>
+        </div>
+      </section>
+      <!-- 1.3 -->
+      <section class="page-section" id="s-1-3">
+        <div class="page-static"><div class="page-breadcrumb">Información General / Guía de perfil y baúl de personaje</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-id-card"></i></div><div class="page-title-text"><h1>Guía de perfil y baúl de personaje</h1><p>Personalización de tu cuenta</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-id-card"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+      <!-- 1.4 -->
+      <section class="page-section" id="s-1-4">
+        <div class="page-static"><div class="page-breadcrumb">Información General / Organizaciones y NPC</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-users"></i></div><div class="page-title-text"><h1>Organizaciones y NPC</h1><p>Figuras y grupos importantes</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-users"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+      <!-- 1.5 -->
+      <section class="page-section" id="s-1-5">
+        <div class="page-static"><div class="page-breadcrumb">Información General / Subforos personalizados. Viviendas y negocios</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-house"></i></div><div class="page-title-text"><h1>Subforos personalizados. Viviendas y negocios</h1><p>Espacios únicos para tu personaje</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-house"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+      <!-- 2.1 AMBIENTACIÓN -->
+      <section class="page-section" id="s-2-1">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Ambientación</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-globe"></i></div><div class="page-title-text"><h1>Ambientación</h1><p>Bienvenido a la ciudad lunar de New Nihon</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>¡Bienvenid@ a la ciudad lunar de New Nihon, me llamo TsukI-A, y seré tu guía personal! ¿Tienes alguna duda sobre los horarios de autobuses? ¿Los mejores restaurantes para comer? ¿O quizá has sido aceptado en la prestigiosa Tsuki Gakko? ¡Todo lo que quieras saber, pregúntame!</p>
+          <p>¡Ah! Pero todo a su tiempo.</p>
+          <p>Primero, déjame explicarte un poquito de historia sobre mi querida ciudad.</p>
+          <p>New Nihon fue fundada por el visionario Minamoto Genji hace mucho, mucho tiempo… ¿Cuánto, me preguntarás? ¡Hace casi cincuenta años! Incluso yo no había nacido en ese entonces, y puedo asegurarte que soy de las personas más ancianas con las que vas a encontrarte… si es que se me puede considerar una persona, jeje.</p>
+          <p>El señor Genji estableció un tratado de paz con Thaddeus Pierson, presidente de Estados Unidos, y Chang Peng, emperador chino, para comenzar el que fue conocido como el <strong>Stargaze Project</strong>, cuyo objetivo no era otro que el de… ¡llevar a la humanidad a la luna!</p>
+          <p>¿Crees que lo consiguieron?<br>Bueno, estás aquí ahora, ¿no es así?</p>
+          <p>New Nihon se fundamenta, por tanto, en un tripartito de gobierno, dirigido actualmente por Minamoto Naegi, Constance Pymer y Chang Jin. Cada líder tiene su propia jurisdicción, ¡y la propia ciudad es muestra de ello! No olvides darte una vuelta por sus secciones y fijarte en la arquitectura, ¡es como tener un E-book de historia en mano! Cada pilar que cimenta los hogares, la cultura de sus calles, la moda…</p>
+          <p>Ay, discúlpame, ya estoy yéndome por las ramas. Déjame continuar.</p>
+          <p>Como te decía, el Stargaze Project permitió a la humanidad crear la primera colonia lunar de la historia. Lo que antes era un yerno gris y sin vida se convirtió en espejo de la Tierra. La terraformación comenzó con una titánica cúpula que cubrió los cielos y nos dio estaciones, cambios meteorológicos y lo más importante: oxígeno… y, con ello, la oportunidad de que la vida se desarrollara.</p>
+          <p>Con el tiempo, los diminutos hogares de los primeros colonos se convirtieron en casas, y esas casas crecieron y crecieron hasta volverse rascacielos. Incluso se crearon embalses tan gigantescos que los barcos podían navegar por ellos, como si se tratase del océano.</p>
+          <p>¿Tú lo has visto alguna vez? El océano quiero decir. ¡Yo jamás! Pero tengo muchas imágenes en mi base de datos y es precioso.</p>
+          <p>En cualquier caso, según me han informado mis desarrolladores, las construcciones en la Tierra y New Nihon parecen dos caras de la misma moneda. Salvando las diferencias, claro, ¡como nuestros recursos energéticos!</p>
+          <p>¿Sabías que en New Nihon utilizamos recursos locales para generar electricidad? La conocida como <strong>Selenita</strong>, un mineral que crece en betas cristalinas bajo el suelo. La <strong>Orbital Core Systems</strong> (también conocida como O.C.S.), financiada por Thaddeus, fue la empresa pionera en la explotación e investigación de las posibilidades de la Selenita, y actualmente mantienen el monopolio de extracción e implantación de minas a lo largo de la luna.</p>
+          <p>De hecho, ¿te has fijado en que la mayoría de máquinas lleva su sello? La O.C.S no solo se encarga de proporcionarnos energía, ¡también ha sido gracias a ellos que hemos logrado tantos avances tecnológicos! ¡New Nihon estará eternamente agradecida por el gran servicio!</p>
+          <p>Pero creo que ya te he aburrido suficiente con tanta historia, ¿verdad? Al fin y al cabo, estoy segura de que tú lo que quieres es empezar a explorar.</p>
+          <p>Déjame entonces desglosar la información más importante sobre nuestra ciudad. Tan solo haz click en los enlaces siguientes para llevarte a la información correspondiente.</p>
+          <p>Eh, ¡y no te olvides de leer la última sección! Encontrarás datos curiosos sobre New Nihon. Seguro que te resultan interesantes.</p>
+        </div>
+      </section>
+      <!-- 2.2 -->
+      <section class="page-section" id="s-2-2">
+        <div class="page-static"><div class="page-breadcrumb">New Nihon / Historia</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-landmark"></i></div><div class="page-title-text"><h1>Historia</h1><p>El pasado de la colonia</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-landmark"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+      <!-- 2.3.1 -->
+      <section class="page-section" id="s-2-3-1">
+        <div class="page-static"><div class="page-breadcrumb">New Nihon / Cúpulas / Tsuki Gakkō</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-school"></i></div><div class="page-title-text"><h1>Tsuki Gakkō</h1><p>La academia de New Nihon</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-school"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+      <!-- 2.3.2 GETSUMEI -->
+      <section class="page-section" id="s-2-3-2">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Cúpulas / Getsumei</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-torii-gate"></i></div><div class="page-title-text"><h1>Getsumei</h1><p>Sector norte y central de New Nihon</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>Ocupa la parte norte y central de New Nihon. Actualmente, el dirigente encargado del sector es Minamoto Naegi, descendiente de Minamoto Genji. Asimismo, la prestigiosa Tsuki Gakko, academia por excelencia de New Nihon, se encuentra en la zona central ¡y ocupa su propia cúpula independiente!</p>
+          <p>El estilo arquitectónico del sector Getsumei puede compararse al Japón clásico y moderno, con barrios por los que el tiempo parece haberse detenido y secciones donde la tecnología de la O.C.S. parece haberlo devorado todo. Así pues, es fácil ver el choque de estilos entre lo nuevo y lo viejo, aunque los valores tradicionales siempre se han romantizado más que en otros sectores, como si convertirse en reflejo directo de la Tierra fuera algo de lo que estar orgullosos.</p>
+        </div>
+      </section>
+      <!-- 2.3.3 STARLIBERTY -->
+      <section class="page-section" id="s-2-3-3">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Cúpulas / Starliberty</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-building-columns"></i></div><div class="page-title-text"><h1>Starliberty</h1><p>Sector sudoeste — sede de la O.C.S.</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>Ocupa la cúpula al sudoeste, y es presidido por Constance Pymer, presidenta que fue elegida hace dos años por votación popular. La base central de la O.C.S. se encuentra aquí, desde el inmenso edificio de la megacorporación se dirigen las operaciones de extracción de Selenita, se prepara a los nuevos empleados y se decide cualquier asunto importante que tenga que ver con todo ello.</p>
+          <p>El estilo de Starliberty puede asociarse a las ciudades norteamericanas, con sus infinitos rascacielos y sus calles fuertemente pavimentadas. También hay toques modernistas en algunos de sus barrios, ese estilo tan bonito de siluetas serpenteantes y orgánicas que tanto recuerdan a los artistas. Y es que, parece que este sector tiene un apego especial al arte, como los graffitis que puedes encontrar en muchas calles, ¡o la música! ¿Cuántos videos hay de bailes? ¡Cientos y cientos!</p>
+        </div>
+      </section>
+      <!-- 2.3.4 YÍNCHÉNG -->
+      <section class="page-section" id="s-2-3-4">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Cúpulas / Yínchéng</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-pagoda"></i></div><div class="page-title-text"><h1>Yínchéng</h1><p>La ciudad de oro y plata</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>El último sector, localizado al sudeste y liderado por el anciano Chang Jin. Hay mucha gente que ha apodado a este sector como "La ciudad de oro y plata" debido al efecto producido por el sol al reflejarse en los edificios y las estatuas, y la luz de la luna artificial. ¡Todo parece colorearse al atardecer y al anochecer!</p>
+          <p>La arquitectura de Yínchéng está muy influenciada por la China clásica, con templos de madera, techos a dos aguas y tejas cerámicas de tonos terrosos. Prima también el metálico y, sobre todo, el dorado, signo de su idea de prosperidad.</p>
+          <p>En este sector se encuentra la base del Selenic Investigation Department (S.E.D), encargados de la seguridad de New Nihon frente a la amenaza de…</p>
+          <div class="error-block">
+            <div class="error-header">«  «  «  «  « «<br>» »» » -  » » E - R - R - O - R  «  « «<br>I N F O R M A C I Ó N  » »» »<br> »   »»  » » »  C O N F I D E N C I A L » »» » -  »<br>    »   »»  » » »</div>
+          </div>
+          <p><em>Ju-jum</em><br>Discúlpame, al parecer he intentado hablar más de la cuenta…<br>¡Pero no te preocupes! No es nada tan importante.</p>
+          <p>Como decía, el S.E.D. tiene como prioridad la seguridad de la ciudadanía de New Nihon, por lo que su institución, ligada al tripartito, está subdividida entre la policía militar, que actúa en casos de emergencias graves, el equipo de investigación y exploración de la luna, para proponer y crear proyectos de expansión, y los Moon Hunters, una unidad especializada en tratar con las disonancias.</p>
+          <p>Que… ¿Qué son las disonancias?<br>Bueno… digamos que son cosas peligrosas, y que nunca, bajo ningún concepto, debes acercarte a ellas.</p>
+          <p>Si alguna vez ves alguna dentro de la cúpula de New Nihon, llama al servicio de emergencias y corre lejos hacia un lugar seguro. En caso de que los Moon Hunters se encuentren allí, sigue siempre sus instrucciones al pie de la letra.</p>
+        </div>
+      </section>
+      <!-- 2.3.5 EXTRARRADIO -->
+      <section class="page-section" id="s-2-3-5">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Cúpulas / Extrarradio</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-industry"></i></div><div class="page-title-text"><h1>Extrarradio</h1><p>El corazón que mantiene latiendo la colonia</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>Si las tres grandes cúpulas son el corazón de New Nihon, el extrarradio sería… bueno, todo lo que hace que ese corazón siga latiendo.</p>
+          <p>Más allá de Getsumei, Starliberty y Yínchéng se encuentra esta enorme región, dedicada a la extracción de recursos y el mantenimiento de las infraestructuras de la colonia. Aquí no hay centros comerciales repletos de gente ni avenidas iluminadas por neones, sino minas de selenita, instalaciones industriales y kilómetros de paisaje lunar que recuerdan que, por mucho que hayamos convertido este lugar en nuestro hogar, seguimos viviendo sobre un satélite.</p>
+          <p>El asentamiento más conocido es Craterhom, un pueblo levantado por aquellos que han decidido vivir al margen del sistema. Sus habitantes tienen algo en común: valoran su libertad por encima de casi cualquier cosa; algunos llegaron huyendo para empezar de cero y, otros, simplemente nunca compartieron el estilo de vida de la colonia.</p>
+          <p>¿Eh? ¿Que cómo los ven desde las tres cúpulas? Pueeeeees… la verdad, depende de a quién preguntes. Hay quienes los consideran simples disidentes y quienes los señalan directamente como delincuentes. La realidad, como casi siempre, es bastante menos sencilla. Lo que sí está claro es que la mina sobre la que se encuentra Craterhom los ha enfrentado durante años con la O.C.S., que nunca ha ocultado su intención de recuperar el control del yacimiento. Sip, digamos que las relaciones diplomáticas no pasan por su mejor momento.</p>
+        </div>
+      </section>
+      <!-- 2.3.6 EXTERIOR -->
+      <section class="page-section" id="s-2-3-6">
+        <div class="page-static"><div class="page-breadcrumb">New Nihon / Cúpulas / Exterior de la base lunar</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-moon"></i></div><div class="page-title-text"><h1>Exterior de la base lunar</h1><p>Más allá de las cúpulas</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-moon"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+      <!-- 2.4.1 ESTUDIANTES -->
+      <section class="page-section" id="s-2-4-1">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Grupos / Estudiantes</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-graduation-cap"></i></div><div class="page-title-text"><h1>Estudiantes</h1><p>Tsuki Kōkō y Tsuki Daigaku</p></div></div>
+        </div>
+        <div class="page-body">
+          <div class="h4-title">Tsuki Kōkō</div>
+          <p>Los más jóvenes del instituto de Tsuki Gakkō. Tienen entre 15 y 18 años, están en plena etapa de descubrir quiénes son y qué quieren hacer con su vida, y probablemente pasen más tiempo en los pasillos o en el club que en clase. No te engaño. La Tsuki Kōkō es ese periodo en el que todo parece muy importante y muy urgente al mismo tiempo: los exámenes, los amigos, los rivales, los primeros líos sentimentales... Y de fondo, la pequeña cuestión de vivir en una colonia lunar a cientos de miles de kilómetros de la Tierra. Sin drama, eh.</p>
+          <div class="h4-title">Tsuki Daigaku</div>
+          <p>Un poco más mayores, un poco más libres y, en teoría, un poco más responsables. Los estudiantes universitarios de Tsuki Gakkō tienen entre 18 y 22 años y ya han elegido una rama y una especialización, lo que significa que saben más o menos hacia dónde van, aunque no siempre estén seguros de si esa dirección les convence. La universidad trae más independencia, más vida social y también más presión: las prácticas, las salidas laborales, las decisiones que empiezan a tener peso real.</p>
+        </div>
+      </section>
+      <!-- 2.4.2 PROFESORADO -->
+      <section class="page-section" id="s-2-4-2">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Grupos / Profesorado</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-chalkboard-user"></i></div><div class="page-title-text"><h1>Profesorado</h1><p>Cuerpo docente de Tsuki Gakkō</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>El cuerpo docente de Tsuki Gakkō abarca desde profesores de instituto hasta catedráticos universitarios, y entre ellos hay de todo: los que llevan décadas en la academia y conocen cada rincón de sus pasillos, los recién llegados con ganas de cambiarlo todo, los que claramente preferirían estar investigando a dar clase y los que viven para sus alumnos. Cada uno con su historia y su forma de entender la enseñanza, pero todos con un objetivo común: que sus alumnos salgan de aquí sabiendo algo más de lo que sabían cuando entraron. Misión no siempre fácil, todo hay que decirlo.</p>
+        </div>
+      </section>
+      <!-- 2.4.3 PERSONAL -->
+      <section class="page-section" id="s-2-4-3">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Grupos / Personal</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-helmet-safety"></i></div><div class="page-title-text"><h1>Personal</h1><p>El engranaje invisible de la academia</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>Bedeles, secretarios, personal de administración, directivos, mantenimiento... Sin ellos, la academia sería un caos absoluto en cuestión de horas. No suelen estar en el centro de la acción, pero lo ven todo: los alumnos que llegan tarde, los profesores que discuten en la sala de reuniones, los papeles que pasan por su mesa y que quizás no deberían. Si quieres saber qué pasa realmente en Tsuki Gakkō, pregúntale al personal. Aunque igual no te responden.</p>
+        </div>
+      </section>
+      <!-- 2.4.4 CIVILES -->
+      <section class="page-section" id="s-2-4-4">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Grupos / Civiles</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-person"></i></div><div class="page-title-text"><h1>Civiles</h1><p>El corazón de la colonia</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>El grueso de la población de New Nihon. Trabajadores, comerciantes, familias, artistas, técnicos, gente que simplemente vive su vida bajo las cúpulas sin pertenecer a ninguna organización en particular. Los civiles son el corazón de la colonia: los que llenan los mercados de Yínchéng, los que se sientan en las terrazas de Starliberty o los que pasean por los jardines de Getsumei. Pueden tener cualquier oficio, cualquier historia y cualquier razón para estar aquí. Algunos llevan toda la vida en la luna. Otros llegaron buscando algo. Y otros... bueno, otros simplemente no pudieron volver a la Tierra y tuvieron que quedarse. Que lleva cinco años sin haber vuelos, por si alguien no estaba al tanto.</p>
+        </div>
+      </section>
+      <!-- 2.4.5 SED -->
+      <section class="page-section" id="s-2-4-5">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Grupos / S.E.D.</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-shield-halved"></i></div><div class="page-title-text"><h1>S.E.D.</h1><p>Selenic Investigation Department</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>Acrónimo de <strong>Selenic Investigation Department</strong>. Es el cuerpo de seguridad, investigación y exploración de New Nihon. Si hay un problema en la colonia, el S.E.D. es quien se encarga de resolverlo, ya sea un robo en Starliberty, una expedición al exterior o algo bastante más complicado que prefiero no detallar aquí. Sus miembros abarcan desde agentes de policía hasta exploradores, pasando por científicos, analistas y la unidad especial conocida como <strong>Moon Hunters</strong>, de la que quizás hayas oído hablar y sobre la que oficialmente no hay mucho que contar. El S.E.D. tiene su base principal en Yínchéng, aunque su presencia se extiende por toda la colonia. Son los que mantienen el orden y se aseguran de que todo funcione como debe. Ya sabes, si tienes cualquier problema, ¡Acude a las comisarías del S.E.D.! Ahí te ayudarán.</p>
+        </div>
+      </section>
+      <!-- 2.4.6 OCS -->
+      <section class="page-section" id="s-2-4-6">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Grupos / O.C.S.</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-satellite"></i></div><div class="page-title-text"><h1>O.C.S.</h1><p>Orbital Core Systems</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>En realidad llamada <strong>Orbital Core Systems</strong>. La megacorporación que extrae, procesa y distribuye la selenita, el mineral que literalmente mantiene en funcionamiento todo lo que ves a tu alrededor. Sin la O.C.S., no hay energía. Sin energía, no hay cúpulas. Sin cúpulas... bueno, ya te imaginas. Su sede está en Starliberty, presidida por Constance Pymer, y su actividad abarca prácticamente todos los sectores de la colonia: desde la gestión energética hasta las Clínicas Aether, pasando por una gran cantidad de contratos laborales y proyectos de desarrollo. Son, a todos los efectos, uno de los pilares sobre los que se sostiene New Nihon, y su peso en la economía y en la vida cotidiana de la colonia es innegable.</p>
+          <p>Es también gracias a ellos que tenemos tantísimos avances tecnológicos, ¿sabías que fueron los pioneros en crear robots con capacidad para pasar el test de Turing? Aunque según tengo entendido, esto no les hizo mucha gracia, ya que debido a la presión social tuvieron que aceptarlos como androides y, en consecuencia, como ciudadanos oficiales de New Nihon.</p>
+        </div>
+      </section>
+      <!-- 2.5.1 HUMANO -->
+      <section class="page-section" id="s-2-5-1">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Razas / Humano</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-person"></i></div><div class="page-title-text"><h1>Humano</h1><p>La raza mayoritaria de la colonia</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>La gran mayoría de la población de New Nihon y la luna. No tienen habilidades especiales ni parecen haber sido influidos por su desarrollo en la luna. La esperanza de vida media está entre los 80 y los 100 años.</p>
+        </div>
+      </section>
+      <!-- 2.5.2 THERGEN -->
+      <section class="page-section" id="s-2-5-2">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Razas / Thergen</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-paw"></i></div><div class="page-title-text"><h1>Thergen</h1><p>Humanoides con apéndices animales</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>Los Thergen poseen apéndices animales, entendiéndose como orejas, colas o incluso alas. Sus cuerpos son siempre humanoides y nunca llegan al punto de ser más animal que humano, lo que ha generado bastante curiosidad sobre sus orígenes, algo que se perdió incluso antes de que los humanos colonizasen la luna. En la actualidad, sin embargo, son aceptados tal y como cualquier otro selenita.</p>
+          <p>Pese a su aspecto, carecen de fuerza o habilidades especiales, y su asociación simbiótica animal apenas se ve reflejada en sus posibilidades físicas.</p>
+        </div>
+      </section>
+      <!-- 2.5.3 CYBORG -->
+      <section class="page-section" id="s-2-5-3">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Razas / Cyborg</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-robot"></i></div><div class="page-title-text"><h1>Cyborg</h1><p>Humanos con modificaciones mecánicas</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>Se categorizan como Cyborg aquellos humanos que, por la razón que sea, han modificado moderadamente su cuerpo con elementos mecánicos. No son robots, puesto que todos ellos conservan el cerebro y órganos (en mayor o menor medida) humanos.</p>
+          <p>Debido a las leyes y limitaciones tecnológicas, si bien sus partes mecánicas poseen mayor resistencia y fuerza, no pueden tener instaladas armas, herramientas o utensilios dentro de su cuerpo.</p>
+        </div>
+      </section>
+      <!-- 2.5.4 ANDROIDE -->
+      <section class="page-section" id="s-2-5-4">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Razas / Androide</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-microchip"></i></div><div class="page-title-text"><h1>Androide</h1><p>Entidades mecánicas con consciencia propia</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>Son aquellos que funcionan enteramente por elementos mecánicos y han sido creados de manera artificial. Todos ellos, pese a su proveniencia, poseen aspecto humanoide (altura, complexión….) y en ningún caso pueden haber sustituido ninguno de sus miembros por objetos, como por ejemplo armas, utensilios o similares. Los robots, para ser considerados independientes, deben haber pasado el Test de Turing, cuyo objetivo es el de valorar la capacidad de una máquina para exhibir un comportamiento inteligente similar al humano. Una vez han pasado la prueba, son clasificados como androides.</p>
+          <p>En la mayoría de los casos son creados para tareas específicas que tienden a ser peligrosas o desagradables para personas de carne y hueso, como formar parte del cuerpo de seguridad, limpieza de las cúpulas, minería… Suelen ser considerados ciudadanos de segunda clase, más objetos que seres sintientes, por lo que no se les tiene en muy alta estima ni llaman a que la sociedad sea más inclusiva con ellos. Es tanto así, que apenas han pasado tres años desde que los primeros androides fueron permitidos en la Tsukki Gakkō.</p>
+          <p>Asimismo, todos ellos tienen un número de serie visible en alguna parte de su cuerpo (la mayoría en cuello, brazos, piernas o espalda), aunque hay datos sobre robots que han sido construidos de manera ilegal. El cuerpo de seguridad tiene orden de retirar dichas unidades y detener su funcionamiento, a razón de proteger a las personas del mal uso que se le pueda dar a estas máquinas.</p>
+        </div>
+      </section>
+      <!-- 2.6 -->
+      <section class="page-section" id="s-2-6">
+        <div class="page-static"><div class="page-breadcrumb">New Nihon / Personajes de interés (NPC)</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-star"></i></div><div class="page-title-text"><h1>Personajes de interés (NPC)</h1><p>Figuras clave de la colonia</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-star"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+      <!-- 2.7.1 CLIMA -->
+      <section class="page-section" id="s-2-7-1">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / Clima y estaciones</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-cloud-sun"></i></div><div class="page-title-text"><h1>Clima y estaciones</h1><p>El sistema CAELUM y el microclima de la cúpula</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>En New Nihon la cúpula ha permitido crear un microclima que, al igual que en la Tierra, cambia según el día y mes. Cada una de ellas lleva incorporada una IA (llamada Sistema CAELUM) que aleatoriariza efectos meteorológicos dentro de unos parámetros establecidos para la buena conservación de la fauna y la flora dentro de las cubiertas.</p>
+          <p>Aún así, al tratarse de un sistema que imita a los estados reales de la Tierra, es común que, por ejemplo, haya días de lluvias intensas en otoño, o días de calor extremo en verano. No es que funcione mal (al menos en general), todo lo contrario, se ejecuta de manera independiente a los designios humanos, ¡Y no, que se ponga a llover el día que no llevas paraguas no es que la IA la haya tomado contigo!</p>
+          <p>De todas maneras, ¿Quieres que te cuente sobre los estándares? Aquí los tienes:</p>
+          <div class="h4-title">Primavera</div>
+          <p>¡Mi estación favorita! Abarca marzo, abril y mayo. El sistema está a pleno funcionamiento y crea el clima perfecto para que los campos se llenen de flores, los cerezos de Getsumei se coloreen de tonos rosas y se cultiven hortalizas y vegetales. Es común que llueva, pero son lluvias suaves, de esas que parecen sacadas de un vídeo LO-FI.</p>
+          <p>Las temperaturas suelen rondar entre los 18 °C a 25 °C, y rara vez bajan a menos de 14 °C o exceden 28 °C.</p>
+          <div class="h4-title">Verano</div>
+          <p>Junio, julio y agosto son los meses más calurosos del año, sobre todo porque las temperaturas pueden llegar incluso a los 35°C en los peores días. Aún así, lo normal es que vayan desde los 16°C hasta los 28°C. La cúpula, además, hace efecto invernadero, lo que provoca que haya bastante humedad en el ambiente.</p>
+          <p>¡No olvides hidratarte bien y no salir en los momentos en los que más calor hace!</p>
+          <div class="h4-title">Otoño</div>
+          <p>Es cuando llega septiembre, octubre y noviembre que las hojas de los árboles empiezan a caerse y todo adquiere tonos marrones y amarillos. ¡Te recomiendo visitar el Sector Yínchéng cuando durante estás fechas! ¡Hace completamente honor a su nombre y parece una ciudad dorada! (●♡∀♡)</p>
+          <p>Las temperaturas van desde 7°C en los días más fríos, a los 26°C los más calurosos, aunque la media suele estar entre los 15°C a los 24°C.</p>
+          <div class="h4-title">Invierno</div>
+          <p>En invierno abarca diciembre, enero y febrero, y suelen realizarse las comprobaciones correspondientes anuales, por lo que el funcionamiento del Sistema CAELUM tiende a ser más errático.</p>
+          <p>Así pues, no son pocas las veces en las que las temperaturas bajan hasta al menos los -5°C, usualmente por las noches, con máximas que no superan los 10°C.</p>
+          <p>También son comunes las nevadas de mayor y menor intensidad, desde nieve ligera, hasta tormentas que impiden ver más allá de tres palmos por delante de uno.</p>
+        </div>
+      </section>
+      <!-- 2.7.2 CALENDARIO -->
+      <section class="page-section" id="s-2-7-2">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / Calendario - Festividades y fechas importantes</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-calendar-days"></i></div><div class="page-title-text"><h1>Calendario — Festividades y fechas importantes</h1><p>Los eventos del año en New Nihon</p></div></div>
+        </div>
+        <div class="page-body">
+          <div class="h4-title">Festividades comunes</div>
+          <div class="h5-title">Año Nuevo</div>
+          <p>¿Cambiar de año a cientos de miles de kilómetros de la Tierra? ¡Claro que sí! El 1 de enero toda la colonia celebra la llegada del nuevo año con espectáculos, reuniones familiares y mucho, pero que mucho, optimismo. ¡Después de todo, empezar el año es mucho más divertido que terminarlo!</p>
+          <div class="h5-title">San Valentín</div>
+          <p>¡El día favorito de las parejas…! Y de los vendedores de chocolate, según mis registros. Cartas, flores y pequeños regalos circulan por toda la colonia durante el día dedicado al amor, la amistad y todas esas confesiones que llevan semanas esperando el momento adecuado.</p>
+          <div class="h5-title">Día de los Fundadores</div>
+          <p>También conocido como el "Día de las Tres Colonias". El 8 de mayo se conmemora la llegada de los primeros colonos y la fundación de Getsumei, Starliberty y Yínchéng. Durante este día se celebran actos oficiales, exposiciones históricas y actividades conmemorativas. ¡Después de todo, sin aquellos pioneros, yo ni siquiera existiría para contártelo!</p>
+          <div class="h5-title">Día de los tsukiboo</div>
+          <p>Celebrado pocos días después del Día de los Fundadores, esta festividad celebra el primer avistamiento de los tsukiboo, los simpáticos conejitos autóctonos de la Luna. Durante este día, las calles se llenan de decoraciones y actividades dedicadas a estos pequeños animales, convertidos con el paso de los años en uno de los símbolos más queridos de toda New Nihon. ¡Y es que, seamos realistas, es muy difícil no encariñarse con un tsukiboo!</p>
+          <div class="h5-title">Halloween</div>
+          <p>Una tradición terrestre que sobrevivió el viaje hasta la Luna. Durante Halloween, las calles se llenan de disfraces, decoraciones temáticas y montones, ¡pero montones de dulces! Algunas tiendas incluso ofrecen premios a los mejores disfraces. Entre tú y yo… Algunos adultos se lo toman bastante más en serio que los niños.</p>
+          <div class="h5-title">Navidad</div>
+          <p>¡Luces, regalos y reuniones familiares! Aunque nos encontremos a cientos de miles de kilómetros de la Tierra, la Navidad sigue siendo una de las celebraciones más queridas de New Nihon. Cada sector la vive a su manera, pero todos comparten el mismo ambiente festivo.</p>
+          <div class="h4-title">Getsumei</div>
+          <div class="h5-title">Hanami lunar</div>
+          <p>En pleno marzo, cuando los cerezos artificiales de Getsumei florecen, los parques se llenan de mantas, comidas y grupos de amigos disfrutando del paisaje. Puede que los árboles no hayan nacido en la Tierra, pero la tradición sigue siendo igual de especial.</p>
+          <div class="h5-title">Tanabata</div>
+          <p>La tradicional fiesta de las estrellas sigue celebrándose cada 7 de julio en Getsumei. Al igual que en la Tierra, los colonos escriben sus deseos en pequeñas tiras de papel y las cuelgan en ramas de bambú decorativas. Dicen que, al estar en la Luna, los deseos tienen más posibilidades de hacerse realidad.</p>
+          <div class="h5-title">Astral Link Festival</div>
+          <p>Celebrado cada 2 años en el Stargaze Dome, es el evento musical más importante de toda la colonia. Durante varios días, idols de todo New Nihon compiten por ganarse el favor del público y convertirse en la estrella del momento. Se celebra en plenas vacaciones, en agosto y las entradas salen a la venta casi un año antes. Sin embargo, ¡se agotan tan rápido que ni mis procesadores consiguen entenderlo!</p>
+          <div class="h4-title">Starliberty</div>
+          <div class="h5-title">Festival de la Innovación</div>
+          <p>Organizado cada 15 de junio por la O.C.S. para celebrar su fundación. Empresas, ingenieros e investigadores presentan sus últimos avances tecnológicos en una gran exposición abierta al público. ¿Lo mejor? Algunas de las invenciones que ves aquí acabarán formando parte de la vida cotidiana de toda la colonia.</p>
+          <div class="h5-title">Día del Alunizaje</div>
+          <p>Celebrado cada 20 de julio, se conmemora la llegada del Apollo 11 a la Luna. En Starliberty se organizan actividades y eventos especiales para recordar aquel histórico "un pequeño paso para el hombre, un gran salto para la humanidad". Aunque, viendo todo lo que hemos construido aquí arriba… ¡Quizá fue un salto incluso más grande de lo que imaginaban!</p>
+          <div class="h4-title">Yínchéng</div>
+          <div class="h5-title">Festival de los Faroles</div>
+          <p>De las festividades más importantes de Yínchéng. Y es que, aunque el resto de la colonia celebra el Año Nuevo en enero, aquí también se mantiene la tradición del Año Nuevo Lunar. 15 días de celebraciones que terminan con el Festival de los Faroles, donde los colonos escriben un deseo en farolillos que se consumen a medida que se alzan hasta el cielo de la cúpula. Dicen que, cuando el farol termina de consumirse, el deseo finalmente se cumple.</p>
+          <div class="h5-title">Festival de Otoño</div>
+          <p>Inspirado en la tradicional Fiesta del Medio Otoño china. Sin embargo, mientras en la Tierra se contempla la Luna, en Yínchéng los colonos se reúnen cada 15 de septiembre para observar la Tierra a través de la cúpula. Si me preguntas, una forma muy especial de recordar el lugar del que proceden sus antepasados.</p>
+          <div class="h5-title">Día de la Seguridad</div>
+          <p>Celebrado por el S.E.D. cada 23 de noviembre, en el aniversario de su fundación. Además de ceremonias oficiales, se organizan demostraciones, simulacros y actividades educativas para toda la población. ¿Eh? ¿Que suena aburrido? Sí, sí; las normas de seguridad parecen soporíferas… ¡Hasta que las necesitas!</p>
+          <div class="h4-title">Calendario escolar</div>
+          <div class="h5-title">Semana de exámenes</div>
+          <p>Ah, sí. Esa época del año. Durante la última semana de enero, la cafetería del campus se llena de estudiantes, la biblioteca permanece abarrotada hasta altas horas de la madrugada y los apuntes aparecen mágicamente después de meses desaparecidos…</p>
+          <div class="h5-title">Ceremonia de fin de curso / Graduación</div>
+          <p>Cada mes de marzo, los estudiantes se reúnen para despedir un año más de clases… ¡O toda una etapa de sus vidas! ¡Qué emocionante! Entre fotografías, discursos y despedidas, la graduación marca el comienzo de un nuevo capítulo. Y sí, suele haber alguna que otra lagrimilla. ¡Pero de las buenas!</p>
+          <div class="h5-title">Ceremonia de inicio de curso</div>
+          <p>El comienzo de un año académico tiene lugar durante la primera semana de abril, coincidiendo con el florecimiento de los cerezos lunares de Getsumei. Nuevos estudiantes, nuevas clases y la promesa de que este año sí o sí llevarán los apuntes al día.</p>
+          <div class="h5-title">Vacaciones de verano</div>
+          <p>El periodo de descanso más largo (y caluroso) del calendario escolar. Durante 5 semanitas de agosto, muchos estudiantes aprovechan para trabajar, viajar entre sectores o, simplemente, disfrutar de un merecido descanso sin tener preocuparse por los estudios.</p>
+          <div class="h5-title">Festival escolar</div>
+          <p>Probablemente el evento favorito de muchos alumnos. Celebrado a mediados de octubre, los clubes preparan actividades, espectáculos y puestos temáticos abiertos a visitantes de toda la colonia. ¿Buscas diversión? ¡Este es el sitio correcto!</p>
+          <div class="h4-title">Organizados por fecha</div>
+          <table class="info-table">
+            <tr><th>Mes</th><th>Festividad / Evento</th></tr>
+            <tr><td>Enero</td><td>Año Nuevo Lunar · Semana de exámenes</td></tr>
+            <tr><td>Febrero</td><td>Festival de los Faroles · San Valentín</td></tr>
+            <tr><td>Marzo</td><td>Ceremonia de graduación (finales de marzo) · Hanami Lunar</td></tr>
+            <tr><td>Abril</td><td>Inicio de curso (primera semana)</td></tr>
+            <tr><td>Mayo</td><td>Día de los Fundadores</td></tr>
+            <tr><td>Junio</td><td>Festival de la Innovación</td></tr>
+            <tr><td>Julio</td><td>Tanabata · Día del Alunizaje</td></tr>
+            <tr><td>Agosto</td><td>Astral Link Festival (cada dos años)</td></tr>
+            <tr><td>Septiembre</td><td>Festival de Otoño</td></tr>
+            <tr><td>Octubre</td><td>Festival Escolar (finales)</td></tr>
+            <tr><td>Noviembre</td><td>Día de la Seguridad</td></tr>
+            <tr><td>Diciembre</td><td>Navidad</td></tr>
+          </table>
+        </div>
+      </section>
+      <!-- 2.7.3 ECONOMÍA -->
+      <section class="page-section" id="s-2-7-3">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / Economía</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-coins"></i></div><div class="page-title-text"><h1>Economía</h1><p>El neoyen y el sistema económico de la colonia</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>¡Hola! Soy Tsuki-A, tu guía personal en New Nihon. ¡Ya llevamos un rato juntos, y creo que te has dado cuenta de lo importante que es el aspecto económico en nuestra colonia! ¿Te has fijado en que todos pagamos con la misma moneda?</p>
+          <p>Al principio, cada sector usaba su propia moneda: yuanes, yenes, dólares... Y, como puedes imaginar, ¡era un lío enorme! Así que, tras muchas reuniones (y probablemente más de un dolor de cabeza), se tomó una decisión histórica: tener una moneda única.</p>
+          <p>Así nació el <strong>neoyen</strong>, la moneda oficial de New Nihon y la cual rige todas y cada una de las transacciones de la colonia: desde los grandes acuerdos comerciales entre corporaciones hasta una bebida fresquita tras un largo paseo bajo cualquiera de las cúpulas. (¡Que sí, que pago en metálico! ¡Los neoyenes también existen en papel moneda!)</p>
+          <p>En New Nihon hay oficios de toda clase, desde dependientes a policías o bomberos, o incluso exploradores (O.C.S.), Moon Hunters y científicos (S.E.D.). Y dentro de todo el entramado de la ciudad, la Tsuki Gakkō también ha querido hacer su parte a través de convenios con las tiendas cercanas para impulsar la contratación de gente joven.</p>
+          <p>Así, los comercios dentro de la cúpula donde se encuentra la escuela tienen por obligación aceptar cláusulas para dichas contrataciones, siendo las más relevantes, la de asegurar que los estudiantes no trabajen más de cinco horas diarias para que puedan compatibilizar el trabajo con los estudios, y un sueldo mínimo de 200¥ al mes.</p>
+        </div>
+      </section>
+      <!-- 2.7.4 TRANSPORTES -->
+      <section class="page-section" id="s-2-7-4">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / Medios de transporte</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-train-subway"></i></div><div class="page-title-text"><h1>Medios de transporte</h1><p>Cómo moverse por la colonia</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>¡Ah, el transporte! Uno de mis temas favoritos. ¿Sabías que New Nihon tiene una red de transporte público bastante completa?</p>
+          <p>En la colonia encontrarás coches y tranvías, perfectamente integrados en la estructura de cada sector. Para los que prefieren algo más rápido, también contamos con autobuses y una red de metro subterráneo que conecta las zonas más transitadas. ¡Así que no hay excusa para llegar tarde a ningún sitio!</p>
+          <p>Y hay un detalle importante que debes tener en cuenta: en toda New Nihon se conduce por el mismo lado, <strong>por la derecha</strong>. Puede parecer una tontería, pero al principio de la colonización, ¡era un auténtico caos! Al igual que con la moneda, se decidió unificar también las normas de circulación para facilitar la convivencia entre los tres sectores.</p>
+          <p>Los pasos entre cúpulas son, probablemente, de las zonas más seguras de New Nihon. Las entradas entre sectores están vigiladas por el S.E.D. y las propias puertas son muy resistentes, construidas con materiales de alta resistencia para garantizar la seguridad de la colonia en todo momento. Así que no te preocupes, ¡puedes moverte con total tranquilidad!</p>
+        </div>
+      </section>
+      <!-- 2.7.5 VIAJES AL EXTERIOR -->
+      <section class="page-section" id="s-2-7-5">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / Viajes al exterior</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-helmet-safety"></i></div><div class="page-title-text"><h1>Viajes al exterior</h1><p>Más allá de la cúpula</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>New Nihon se asienta en la cara visible de la Luna. Más allá de los límites transparentes que nos protegen se extiende un paisaje gris, silencioso y todavía sin colonizar, al menos en gran medida.</p>
+          <p>Para viajar al exterior de la cúpula es necesario un permiso especial emitido por las autoridades correspondientes, además de equipamiento certificado: trajes presurizados, suministro de oxígeno, sistemas de comunicación de largo alcance... Afuera no hay atmósfera que respire, y la temperatura puede caer hasta los -170°C en zonas de sombra. No es un paseo campestre, precisamente.</p>
+          <p>El acceso está estrictamente restringido a personal autorizado, misiones científicas y operaciones muy concretas aprobadas por el tripartito. Actualmente, el turismo lunar no es una opción disponible para el ciudadano común, aunque hay quienes llevan años presionando para que eso cambie.</p>
+          <div class="error-block">
+            <div class="error-header">«  «  «  «  « «<br>» »» » -  » »  E - R - R - O - R  «  « «<br>I N F O R M A C I Ó N » »» »<br>»   »»  » » »  C O N F I D E N C I A L » »» » -  »<br>    »   »»  » » »</div>
+            <br>
+            [INFORMACIÓN RESTRINGIDA — ACCESO DENEGADO]<br><br>
+            Los datos relativos a la cara oculta de la luna y a las expediciones no autorizadas en el exterior de las cúpulas están clasificados bajo el Protocolo de Seguridad Lunar 7-Omega.<br><br>
+            Mientras permanezcas dentro de la cúpula, estás a salvo.<br><br>
+            No hagas preguntas.<br><br>
+            No busques respuestas.<br><br>
+            [FIN DEL ACCESO]
+          </div>
+          <p>Ju-jum, lo siento, al parecer hay cierta información que mis protocolos no me permiten compartir. ¡Pero no te preocupes! Lo importante es que, dentro de New Nihon, estás completamente seguro.</p>
+        </div>
+      </section>
+      <!-- 2.7.6 IDIOMAS -->
+      <section class="page-section" id="s-2-7-6">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / Idiomas y comunicación</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-language"></i></div><div class="page-title-text"><h1>Idiomas y comunicación</h1><p>Las lenguas de la colonia</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>New Nihon nació de la unión de tres grandes colonias, cada una heredera de su país de origen: China, Japón y Estados Unidos. Y eso se nota en todo: en la arquitectura, en la gastronomía, en las festividades... ¡Y por supuesto, en el idioma!</p>
+          <p>Cada sector mantiene su lengua de origen como parte de su identidad. En Yínchéng escucharás el chino en los mercados, los templos y las conversaciones de la calle. En Starliberty, el inglés domina los despachos, los medios de comunicación y las vallas publicitarias. Y en el corazón de Getsumei, el japonés impregna desde los letreros de las tiendas hasta las canciones que suenan en los parques.</p>
+          <p>Pero claro, con tres idiomas en juego, hacía falta uno que funcionara como lengua común. Y como la cúpula japonesa es la más grande y la que más conexiones tiene con el resto de la ciudad, el <strong>japonés</strong> acabó adoptándose como el idioma oficial de New Nihon, el que se usa en los documentos administrativos, en las escuelas y en los intercambios entre sectores.</p>
+          <p>Ahora bien, que el japonés sea el idioma oficial no significa que todo el mundo lo hable con fluidez. Para quienes no han tenido la oportunidad de aprenderlo, existen las <strong>balizas de autotraducción</strong>: pequeños dispositivos, repartidos por toda la ciudad y también integrados en muchos comunicadores personales, que se encargan de traducir en tiempo real carteles, mensajes y conversaciones básicas. No son perfectas, ojo. El sarcasmo todavía se les resiste, y de vez en cuando la traducción de un modismo de Starliberty en Yínchéng puede generar situaciones de lo más curiosas. Pero en general, hacen la convivencia mucho más sencilla.</p>
+          <p>Así que si eres de los que todavía están aprendiendo el idioma... ¡no te rindas! Y si alguna vez ves que alguien tiene dificultades para comunicarse, ¡un poco de paciencia siempre es bienvenida!</p>
+        </div>
+      </section>
+      <!-- 2.7.7 SANIDAD -->
+      <section class="page-section" id="s-2-7-7">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / Sanidad y salud pública</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-hospital"></i></div><div class="page-title-text"><h1>Sanidad y salud pública</h1><p>El sistema sanitario de la colonia</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>¡Qué alegría poder decirte que en New Nihon nadie se queda sin atención médica! Todo residente está inscrito de forma automática en la <strong>Cobertura General</strong>, el seguro médico universal de la colonia, financiado con parte del sueldo de cada trabajador. Sin burocracia innecesaria, sin letra pequeña, sin exclusiones por raza o condición.</p>
+          <div class="h4-title">Red sanitaria</div>
+          <div class="h5-title">Hospitales de Cúpula (red pública)</div>
+          <p>Hay uno por sector y uno central en la zona de acceso entre cúpulas. La atención está cubierta al cien por cien, sin coste directo para el paciente. El más grande y prestigioso es el <strong>Hospital General de Yínchéng</strong>, aunque los de Getsumei y Starliberty también cuentan con un excelente nivel de equipamiento. Las listas de espera para especialistas pueden ser generosas, eso sí. ¡La paciencia es una virtud!</p>
+          <div class="h5-title">Clínicas Aether (red privada)</div>
+          <p>Para quienes prefieren (o pueden permitirse) una atención más personalizada. Sin esperas, tecnología de última generación y especialistas de primer nivel. Eso sí, se requiere seguro privado o neoyenes, muchos neoyenes. No voy a mentirte. Las Clínicas Aether son una empresa de la O.C.S., por cierto. ¿Sorpresa? Tampoco tanta.</p>
+          <div class="h5-title">Unidad Médica Interna del S.E.D.</div>
+          <p>Instalaciones de uso exclusivo para los miembros del cuerpo de seguridad. No está abierta al público general, pero cuentan con recursos específicos para tratar las lesiones derivadas de sus operaciones... y de algunas otras cosas que mejor no detallar.</p>
+          <div class="h4-title">Síndrome Lunar</div>
+          <p>En los últimos tiempos se ha empezado a hablar cada vez más de una afección bautizada provisionalmente como <strong>Síndrome Lunar</strong>. La administración ha sido categórica al respecto: no hay motivo de alarma, los casos están siendo correctamente gestionados y el sistema sanitario está completamente preparado para tratar a los afectados.</p>
+          <p>En sus fases tempranas, el Síndrome Lunar es perfectamente tratable. Los síntomas iniciales incluyen malestar general, mareos y un cansancio persistente que no mejora con el descanso. En algunos casos más avanzados, puede aparecer una alteración cutánea caracterizada por una descamación de pigmentación similar a la selenita, aunque desde las autoridades sanitarias insisten en que estos casos son minoritarios y están siendo monitorizados de cerca.</p>
+          <p>Si experimentas alguno de estos síntomas, acude a tu centro de salud más cercano. Y recuerda: la detección temprana es clave para una recuperación completa.</p>
+          <div class="error-block">
+            <div class="error-header">ARCHIVO INTERNO — S.E.D. — CLASIFICADO<br>[DISTRIBUCIÓN RESTRINGIDA — NO DIVULGAR]</div>
+            <br>
+            <strong>Síndrome Lunar — Informe de progresión clínica (actualización interna)</strong><br><br>
+            <strong>Estadio 1 (leve):</strong> Malestar general, fatiga, episodios de mareo. Tratamiento disponible. Pronóstico favorable si se detecta en esta fase.<br><br>
+            <strong>Estadio 2 (moderado):</strong> Aparición de descamación cutánea de pigmentación selenítica. Tratamiento disponible con resultado variable.<br><br>
+            <strong>Estadio 3 (grave):</strong> Las escamas se fusionan progresivamente con el tejido dérmico y muscular. Rigidez progresiva. Las heridas dejan de cicatrizar. El proceso es irreversible a partir de este punto.<br><br>
+            <strong>Estadio 4 (crítico):</strong> Deterioro neurológico severo. Irascibilidad extrema, episodios de violencia sin estímulo aparente, pérdida total de reconocimiento de personas del entorno.<br><br>
+            <strong>Estadio 5 [CLASIFICADO — ACCESO RESTRINGIDO A DIRECCIÓN S.E.D.]:</strong> La mineralización avanza hacia el interior del organismo, sustituyendo tejido orgánico por estructuras de selenita cristalizada. El resultado es una entidad que conserva movilidad y agresividad extrema: las denominadas internamente como <strong>Disonancias</strong>.<br><br>
+            Los testimonios de recuperación publicados en el portal oficial de salud pública corresponden a casos de Estadio 1 y 2. Ningún paciente en Estadio 3 o superior ha completado un proceso de recuperación documentado.<br><br>
+            Número de casos activos en Estadio 3 o superior: ████<br>
+            Número de conversiones a Estadio 5 en los últimos seis meses: ████<br><br>
+            Esta información no debe ser divulgada a la población civil bajo ninguna circunstancia.
+          </div>
+        </div>
+      </section>
+      <!-- 2.7.8 MODAS -->
+      <section class="page-section" id="s-2-7-8">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / Modas</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-shirt"></i></div><div class="page-title-text"><h1>Modas</h1><p>Estilo y cultura audiovisual de New Nihon</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>¡Uno de mis temas favoritos! Y es que en New Nihon la moda no es solo ropa: es identidad, historia y, muchas veces, una declaración de principios.</p>
+          <p>Como ya sabrás, cada sector tiene su propia estética, ligada a su origen cultural. Getsumei mezcla la elegancia del kimono tradicional con la modernidad del streetwear japonés: telas delicadas, colores pastel, capas y mucho detalle. Starliberty apuesta por algo más atrevido y urbano, con influencias del arte y la música de la calle: grafitis en cazadoras, zapatillas personalizadas y esa mezcla de lujo y descaro tan característica. Y Yínchéng combina la riqueza del brocado chino con el minimalismo contemporáneo: dorados, bordados, siluetas limpias que dicen mucho sin necesitar decir nada.</p>
+          <p>Con el tiempo, sin embargo, los estilos se han ido mezclando, y hoy en día no es raro ver prendas de un sector reinterpretadas en otro. ¡La moda de New Nihon es, ante todo, una moda de fusión!</p>
+          <p>Pero si hay algo que de verdad marca tendencia en la colonia, eso son los <strong>idols</strong>. Los grupos y artistas de New Nihon no solo cantan o bailan: también marcan tendencia, protagonizan campañas publicitarias y se convierten en referentes visuales para miles de personas. Convertirse en idol es una forma legítima de ganarse la vida en New Nihon, aunque con tanta competencia, no todos lo consiguen.</p>
+          <p>Los más populares se presentan al <strong>Astral Link Festival</strong>, el evento musical más importante de la colonia (celebrado cada dos años). Quien gana, gana de verdad: anuncios, pantallas gigantes, el nombre en boca de todo el mundo durante dos años. No es poco.</p>
+          <div class="h5-title">RIM★RUNNERS</div>
+          <p>Esta boyband masculina hizo su debut hace relativamente poco, pero su escalada en oyentes y seguidores ha sido tan meteórica que no es extraño encontrar su merchandising en cualquier tienda de New Nihon. ¿Su secreto? Música con garra, coreografías imposibles y una estética visual que ha marcado tendencia desde su primer lanzamiento. (Entre tú y yo: mis bases de datos registran un aumento del 34% en búsquedas de sus canciones cada vez que actualizan su perfil en Neobook. Por algo será.)</p>
+          <div class="h5-title">Phansh-IA</div>
+          <p>La idol IA más famosa de New Nihon. Fue creada por un colectivo de desarrolladores independientes y se convirtió rápidamente en un fenómeno cultural sin precedentes. No envejece, no se cansa, puede actuar en tres escenarios distintos al mismo tiempo gracias a proyecciones holográficas, y tiene una agenda de lanzamientos que deja en ridículo a cualquier artista de carne y hueso. Algunos la adoran. Otros la consideran una amenaza para los artistas humanos. Y otros, simplemente, cantan sus canciones en la ducha sin pensar demasiado en ello.</p>
+        </div>
+      </section>
+      <!-- 2.7.9 CRIMINALIDAD -->
+      <section class="page-section" id="s-2-7-9">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / Índice de criminalidad</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-scale-balanced"></i></div><div class="page-title-text"><h1>Índice de criminalidad</h1><p>La ley y el orden en la colonia</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>New Nihon es una colonia segura. ¡De verdad! Pero sería deshonesto de mi parte decirte que es un paraíso libre de conflictos.</p>
+          <p>La criminalidad existe, como en cualquier ciudad de tamaño comparable. Pequeños robos, trapicheos, alguna red de tráfico de sustancias controladas y, en los rincones más oscuros de cada sector, estructuras organizadas que prefieren operar lejos de la vista del S.E.D. Cada sector tiene sus propias particularidades: en Starliberty, la corrupción y el fraude financiero son los delitos más habituales (el dinero llama al dinero, y a veces también a quienes quieren tomarlo prestado sin permiso). En Yínchéng, las redes de comercio ilegal aprovechan la densidad del sector y los viejos contactos terrícolas. Y en Getsumei... bueno, los conflictos suelen quedarse en el ámbito privado, aunque eso no significa que no existan.</p>
+          <p>El S.E.D. trabaja activamente para mantener el orden y la seguridad en todos los sectores, y su presencia disuasoria suele ser suficiente para que la gran mayoría de los ciudadanos vivan sin incidentes. Aun así, como en cualquier ciudad, es recomendable mantener un mínimo de precaución: no dejes tus pertenencias sin vigilancia, evita los callejones poco iluminados a altas horas y, si ves algo sospechoso, avisa a las autoridades.</p>
+          <p>¿Y qué pasa con quienes son detenidos? Todo aquel que sea declarado culpable de un delito cumple condena en el <strong>Yermo Lunar</strong>, la única instalación penitenciaria de la colonia, situada en el exterior lunar, fuera de las cúpulas. El acceso está estrictamente controlado por el S.E.D. y las condiciones de reclusión, aunque funcionales, no son precisamente cómodas. Hasta la fecha no existe ningún testimonio verificado de fuga.</p>
+          <div class="error-block">
+            <div class="error-header">ARCHIVO INTERNO — S.E.D. — CLASIFICADO<br>[CÓDIGO: VOLKODLAK — NIVEL DE ACCESO: MÁXIMO]</div>
+            <br>
+            Existe una organización criminal de origen desconocido que lleva al menos tres años operando en las sombras de New Nihon bajo el nombre en clave <strong>VOLKODLAK</strong>. Su estructura interna, cadena de mando y financiación son, a fecha de este informe, completamente desconocidos.<br><br>
+            VOLKODLAK opera en los tres sectores de la colonia, con presencia documentada también en el extrarradio y en zonas del exterior no autorizadas. Sus métodos incluyen infiltración en instituciones públicas y privadas, manipulación de información y acceso a tecnología que en algunos casos supera la disponible para el propio S.E.D.<br><br>
+            Su objetivo documentado es la captación de individuos diagnosticados con Síndrome Lunar en estadios 3 y 4, antes de que el S.E.D. pueda localizarlos. Los sujetos son trasladados a instalaciones de localización desconocida, presumiblemente en la cara oculta de la luna.<br><br>
+            Una vez allí, los sujetos son llevados deliberadamente hasta el estadio 5 de progresión del Síndrome Lunar. VOLKODLAK sostiene que la selenita es un recurso finito en proceso de agotamiento acelerado, y que la administración lleva años ocultando esta información a la población. No se ha podido confirmar ni desmentir esta afirmación con los datos disponibles actualmente.<br><br>
+            Número de miembros identificados: ████<br>
+            Número de sujetos captados en los últimos doce meses: ████<br>
+            Clasificación de amenaza actual: <strong>CRÍTICA</strong><br><br>
+            La existencia de VOLKODLAK no debe ser divulgada bajo ninguna circunstancia a la población civil. Cualquier filtración de información será investigada y tratada con la máxima severidad.
+          </div>
+        </div>
+      </section>
+      <!-- 2.7.10 TSUKIBOOS -->
+      <section class="page-section" id="s-2-7-10">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / Los habitantes: Tsukiboos</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-hippo"></i></div><div class="page-title-text"><h1>Los habitantes: Tsukiboos</h1><p>Los pequeños autóctonos de la Luna</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>¡Uno de mis temas favoritos! ¡Y el de casi todo el mundo, seamos honestos!</p>
+          <p>Cuando los primeros colonos llegaron a la Luna, uno de sus primeros hallazgos fue algo totalmente inesperado: los <strong>tsukiboos</strong>. Estos simpáticos conejitos son una especie autóctona de la Luna, y llevan aquí mucho, pero que mucho más tiempo que cualquier ser humano. Los primeros avistamientos tuvieron lugar apenas unas semanas después del establecimiento de las colonias iniciales. Desde entonces, se han convertido en una de las mayores curiosidades de New Nihon y, para desgracia de más de un investigador, también en uno de sus mayores misterios.</p>
+          <p>Nadie sabe exactamente cómo surgieron. Nadie entiende cómo sobrevivieron en un entorno tan hostil antes de que existieran las cúpulas. Y nadie, hasta la fecha, ha conseguido descifrar su forma de comunicarse, algo que las balizas de autotraducción han catalogado como "incompatible con los patrones lingüísticos conocidos" y han decidido ignorar olímpicamente.</p>
+          <p>Existen muchas variedades de tsukiboo: los hay pequeños como un puño y otros que pueden llegar al tamaño de un perro mediano. Los hay blancos, grises, negros, con manchas, con orejas larguísimas o casi sin orejas. También difieren en comportamiento: algunos son tímidos y huidizos, otros directamente se sientan en el regazo de cualquier desconocido sin pedirle permiso.</p>
+          <p>Con el paso de los años, los tsukiboos se han convertido en la mascota no oficial de New Nihon, y existe una legislación específica que prohíbe su caza, maltrato o comercio ilegal. Algunos colonos los tienen como mascotas, aunque criar un tsukiboo requiere de un permiso especial y cumplir con una serie de condiciones de bienestar animal.</p>
+          <p>¡Ah! Y si alguna vez ves uno en la calle, no te asustes si te sigue. Solo significa que le has caído bien. Que un tsukiboo elija seguirte se considera de buen augurio en New Nihon. Aunque eso, reconozco, no está en mis bases de datos oficiales.</p>
+        </div>
+      </section>
+      <!-- 2.7.11 DISONANCIAS -->
+      <section class="page-section" id="s-2-7-11">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / [CONF.] Disonancias</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><div class="page-title-text"><h1>[CONF.] Disonancias</h1><p>Informe SED-INF-009 — Clasificado</p></div></div>
+        </div>
+        <div class="page-body">
+          <div class="classified-block">
+            <div class="classified-tag">Documento Clasificado</div>
+            <p style="margin:0;font-size:12px;color:#666;">Nivel de acceso requerido: S.E.D. Dirección Central / Administración Tripartita<br>Distribución autorizada: Dirección S.E.D. — Altos cargos O.C.S. — Administración Central<br>Fecha de última actualización: ████</p>
+          </div>
+          <div class="h4-title">Definición y origen</div>
+          <p>Se denomina <strong>Disonancia</strong> a toda entidad resultante de la progresión terminal del Síndrome Lunar en estadio 5. Las Disonancias no son criaturas de origen independiente ni una especie autóctona de la Luna: son, o fueron, personas. La enfermedad no hace distinción de edad, sexo, raza ni condición socioeconómica.</p>
+          <p>Más allá de las diferencias morfológicas observadas entre casos, hay constantes en todos los registros disponibles: presencia dominante de selenita cristalizada como material estructural del cuerpo (en sustitución o fusión con el tejido orgánico original), ausencia total de rasgos reconocibles del individuo antes de la conversión, y presencia de un núcleo energético central de naturaleza aún no completamente comprendida.</p>
+          <p>Las formas documentadas incluyen, entre otras:</p>
+          <ul>
+            <li>Entidades de morfología humanoide con estructuras cristalinas de gran tamaño emergiendo de extremidades y torso.</li>
+            <li>Entidades de tipo arácnido con un núcleo central de gran densidad mineral.</li>
+            <li>Formas cuadrúpedas con acumulaciones de cristal blanco y negro.</li>
+            <li>Formas serpenteantes o draconianas con escamas de selenita negra y verde.</li>
+          </ul>
+          <p>La variabilidad morfológica no responde a ningún patrón identificado relacionado con la raza, el sexo o la edad del individuo afectado. Se sospecha que puede estar influenciada por la velocidad de progresión del Síndrome o por la localización del núcleo energético primario, pero esto no ha podido ser confirmado.</p>
+          <div class="h4-title">Comportamiento</div>
+          <p>Las Disonancias son entidades de agresividad extrema y constante. No se han registrado, en ninguno de los casos documentados, comportamientos defensivos, de huida o de neutralidad. El ataque parece ser su estado por defecto ante cualquier estímulo externo, ya sea visual, auditivo o de proximidad.</p>
+          <p>No responden a comunicación verbal en ningún idioma. No se ha podido establecer ninguna forma de contacto con individuos en estadio 5.</p>
+          <p>A mayor tiempo transcurrido desde la conversión, mayor es el tamaño de la entidad y mayor su densidad mineral, lo que se traduce en una resistencia física significativamente superior y en una mayor dificultad para su neutralización.</p>
+          <div class="h4-title">Distribución y presencia en la colonia</div>
+          <div class="h5-title">Dentro de las cúpulas</div>
+          <p>La presencia de Disonancias en el interior de las cúpulas es extremadamente infrecuente, pero no inexistente. Todos los casos registrados han tenido como origen invariable a individuos que ocultaron su diagnóstico de Síndrome Lunar o que, por la razón que fuera, no recibieron atención médica a tiempo.</p>
+          <p>Los protocolos de actuación ante un avistamiento dentro de las cúpulas incluyen evacuación inmediata del área y movilización de unidades Moon Hunter. Bajo ninguna circunstancia debe intentarse el contacto o la confrontación directa sin el equipamiento y la formación adecuados.</p>
+          <div class="h5-title">En el anillo exterior (extrarradio)</div>
+          <p>La menor densidad de control del S.E.D. en el extrarradio ha permitido que varios casos evolucionen sin ser detectados. Los avistamientos en esta zona son más frecuentes que en el interior de las cúpulas, aunque la distancia de la población reduce significativamente el riesgo de incidentes con civiles.</p>
+          <div class="h5-title">En el yermo lunar (exterior de las cúpulas)</div>
+          <p>Los avistamientos de Disonancias en el exterior de las cúpulas presentan una frecuencia que no se corresponde con el número de casos de Síndrome Lunar registrados oficialmente en la colonia. La discrepancia es significativa y no ha podido ser explicada con los datos disponibles. Una de las hipótesis actualmente en estudio contempla que la selenita del yermo lunar actúe como catalizador o punto de atracción para las Disonancias, aunque esta teoría no ha sido confirmada.</p>
+          <div class="h4-title">Contención y neutralización</div>
+          <p>No existe protocolo de captura estándar para Disonancias en entorno urbano. La política oficial del S.E.D. es la neutralización. A fecha del presente informe, ningún sujeto en estadio 5 ha mostrado indicios de reversibilidad ni ha respondido positivamente a ningún intento de tratamiento.</p>
+          <p>El equipamiento estándar de las unidades Moon Hunter incluye armamento específico para la fragmentación de estructuras cristalinas y sistemas de contención de emergencia. Los detalles técnicos están disponibles en el Anexo 7 del Manual Operativo del S.E.D. (acceso restringido).</p>
+          <div class="h4-title">Confidencialidad</div>
+          <p>Toda la información contenida en este documento es de acceso restringido. Su divulgación parcial o total constituye una infracción grave del protocolo de seguridad de la colonia y será tratada en consecuencia. La población civil no debe tener conocimiento de la naturaleza real de las Disonancias ni de la progresión del Síndrome Lunar más allá de los estadios 1 y 2.</p>
+          <p>Cualquier filtración de información relacionada con este documento deberá ser comunicada de inmediato a la Dirección Central del S.E.D.</p>
+        </div>
+      </section>
+      <!-- 2.7.12 CURIOSIDADES -->
+      <section class="page-section" id="s-2-7-12">
+        <div class="page-static">
+          <div class="page-breadcrumb">New Nihon / Vida / Curiosidades</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-lightbulb"></i></div><div class="page-title-text"><h1>Curiosidades</h1><p>Datos interesantes sobre New Nihon</p></div></div>
+        </div>
+        <div class="page-body">
+          <ul class="curiosity-list">
+            <li>New Nihon está asentada en la cara visible de la luna. La cara oculta tiene tantos misterios que desvelar… aunque está prohibido ir. ¡Puede ser peligroso!</li>
+            <li>New Nihon tiene sus propias estaciones y condiciones meteorológicas, pero también su propia luna. No es de verdad, sino que se trata de un holograma reproducido en la cúpula que sigue las mismas fases que podrían verse desde la Tierra.</li>
+            <li>Hay en total cinco cúpulas cubriendo New Nihon: cuatro cubren cada uno de los sectores y la academia Tsuki Gakko, mientras que la última cubre todo New Nihon a la vez. ¡Son cúpulas dentro de otra cúpula!</li>
+            <li>Debido a circunstancias varias, actualmente los viajes entre la luna y la Tierra se han suspendido hasta nuevo aviso. Desde hace aproximadamente diez años, la actividad solar se ha vuelto especialmente inestable, lo que ha imposibilitado viajar de manera segura.</li>
+            <li>Cada cúpula tiene su propio clima y meteorología. El Sector Starliberty es por lo general más caluroso que el sector Getsumei, y tiende a llover menos. ¡Aunque si hay algo de lo que New Nihon no puede salvarse, es de los caprichos del sistema CAELUM!</li>
+          </ul>
+        </div>
+      </section>
+      <!-- 3.1.1 CURSOS INSTITUTO -->
+      <section class="page-section" id="s-3-1-1">
+        <div class="page-static">
+          <div class="page-breadcrumb">Tsuki Gakkō / Instituto (Tsuki Kōkō) / Cursos</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-school"></i></div><div class="page-title-text"><h1>Cursos</h1><p>Instituto — Tsuki Kōkō</p></div></div>
+        </div>
+        <div class="page-body">
+          <table class="info-table">
+            <tr><th>Curso</th><th>Edad de entrada</th></tr>
+            <tr><td>1º</td><td>15-16 años</td></tr>
+            <tr><td>2º</td><td>16-17 años</td></tr>
+            <tr><td>3º</td><td>17-18 años</td></tr>
+          </table>
+        </div>
+      </section>
+      <!-- 3.1.2 ASIGNATURAS INSTITUTO -->
+      <section class="page-section" id="s-3-1-2">
+        <div class="page-static">
+          <div class="page-breadcrumb">Tsuki Gakkō / Instituto (Tsuki Kōkō) / Asignaturas</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-book"></i></div><div class="page-title-text"><h1>Asignaturas</h1><p>Instituto — Tsuki Kōkō</p></div></div>
+        </div>
+        <div class="page-body">
+          <div class="h4-title">Troncales</div>
+          <table class="info-table">
+            <tr><th>Asignatura</th><th>Descripción</th><th>Curso</th></tr>
+            <tr><td>Idiomas</td><td>Lengua y literatura del idioma común de la colonia, junto con los dos idiomas adicionales (japonés, inglés, chino)</td><td>1º, 2º, 3º</td></tr>
+            <tr><td>Matemáticas</td><td>Álgebra, geometría y cálculo básico adaptados a los estándares educativos de la colonia</td><td>1º, 2º, 3º</td></tr>
+            <tr><td>Ciencias Naturales</td><td>Biología, física y química aplicadas al entorno lunar y a los ecosistemas creados dentro de las cúpulas</td><td>1º, 2º, 3º</td></tr>
+            <tr><td>Historia y Sociedad</td><td>Historia terrícola moderna y fundamentos de la colonización lunar, con énfasis en los orígenes de New Nihon</td><td>1º, 2º</td></tr>
+            <tr><td>Educación Física</td><td>Desarrollo físico general, con adaptaciones según la raza del alumnado y las condiciones gravitacionales de la colonia</td><td>1º, 2º, 3º</td></tr>
+            <tr><td>Tecnología y Sistemas</td><td>Introducción a la informática, la robótica básica y los sistemas de infraestructura de la colonia</td><td>1º, 2º</td></tr>
+            <tr><td>Ética y Civismo</td><td>Convivencia entre razas y sectores, normas sociales y resolución de conflictos en una comunidad diversa</td><td>1º</td></tr>
+            <tr><td>Orientación Académica y Profesional</td><td>Información sobre especializaciones universitarias, salidas profesionales y el mercado laboral de la colonia</td><td>3º</td></tr>
+          </table>
+          <div class="h4-title">Optativas</div>
+          <table class="info-table">
+            <tr><th>Asignatura</th><th>Descripción</th><th>Curso</th></tr>
+            <tr><td>Introducción a la Robótica</td><td>Primeros conceptos de mecánica aplicada y programación básica, con proyectos prácticos</td><td>2º, 3º</td></tr>
+            <tr><td>Biología Lunar</td><td>Estudio introductorio de la fauna y flora autóctonas de la Luna, con especial atención a los tsukiboos y su ecosistema</td><td>2º, 3º</td></tr>
+            <tr><td>Economía Doméstica</td><td>Gestión básica del presupuesto personal en neoyenes, compras y planificación de la vida cotidiana</td><td>2º, 3º</td></tr>
+            <tr><td>Arte y Diseño</td><td>Dibujo, composición visual, diseño gráfico y fundamentos creativos adaptados al entorno cultural de New Nihon</td><td>1º, 2º, 3º</td></tr>
+            <tr><td>Música</td><td>Teoría musical e interpretación, con especial vinculación a la cultura del idol y el Astral Link Festival</td><td>1º, 2º, 3º</td></tr>
+            <tr><td>Cultura y Tradiciones de los Tres Sectores</td><td>Estudio comparado de costumbres, festividades y valores de Getsumei, Starliberty y Yínchéng</td><td>2º</td></tr>
+            <tr><td>Introducción al Derecho</td><td>Nociones básicas del ordenamiento jurídico de la colonia y el funcionamiento de las instituciones</td><td>3º</td></tr>
+            <tr><td>Primeros Auxilios</td><td>Atención médica básica para situaciones de emergencia, incluyendo especificidades para las distintas razas</td><td>2º, 3º</td></tr>
+            <tr><td>Periodismo Escolar</td><td>Redacción, edición y comunicación aplicadas, vinculadas al periódico del instituto</td><td>2º, 3º</td></tr>
+            <tr><td>Cuidado Animal</td><td>Nociones básicas sobre el cuidado responsable de mascotas comunes y tsukiboos</td><td>1º, 2º, 3º</td></tr>
+            <tr><td>Educación Cívica de Seguridad</td><td>Introducción a las normas de seguridad de la colonia, impartida en colaboración con el S.E.D.</td><td>3º</td></tr>
+            <tr><td>Idiomas Terrestres</td><td>Estudio de idiomas con raíces históricas en la Tierra, como el español, el francés o el latín, para ampliar el conocimiento cultural</td><td>Varios cursos</td></tr>
+          </table>
+        </div>
+      </section>
+      <!-- 3.1.3 CLUBES INSTITUTO -->
+      <section class="page-section" id="s-3-1-3">
+        <div class="page-static">
+          <div class="page-breadcrumb">Tsuki Gakkō / Instituto (Tsuki Kōkō) / Clubes</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-people-group"></i></div><div class="page-title-text"><h1>Clubes</h1><p>Instituto — Tsuki Kōkō</p></div></div>
+        </div>
+        <div class="page-body">
+          <div class="h5-title">Consejo Estudiantil</div>
+          <p>El órgano representativo del alumnado del instituto. Se encarga de organizar eventos, mediar en conflictos y representar a los estudiantes ante el profesorado y la dirección. Tener voz en las decisiones del centro suena genial, claro. La parte del papeleo ya no tanto.</p>
+          <div class="h5-title">Periódico Escolar</div>
+          <p>Noticias, entrevistas y cotilleos varios de la academia, todo recopilado, redactado y publicado por los propios alumnos. Un club con mucho poder... y mucha responsabilidad. No todo lo que ocurre en Tsuki Gakkō merece ser publicado, pero decidir qué sí y qué no ya es harina de otro costal.</p>
+          <div class="h5-title">Club de Baloncesto</div>
+          <p>Entrenamientos intensos, partidos cargados de adrenalina y la presión constante de llegar lo más lejos posible en los torneos intercolegiales. Aquí el trabajo en equipo no es opcional.</p>
+          <div class="h5-title">Club de Tenis</div>
+          <p>Raqueta en mano, mucha técnica y partidos que pueden alargarse eternamente. Tiene fama de atraer tanto a deportistas serios como a quienes simplemente buscan un buen ambiente social. No son mutuamente excluyentes.</p>
+          <div class="h5-title">Club de Natación</div>
+          <p>Horas en la piscina perfeccionando estilos y resistencia. Exigente a nivel físico, con esa mezcla característica de disciplina y camaradería que solo existe entre vestuarios.</p>
+          <div class="h5-title">Club de Atletismo</div>
+          <p>Carreras, saltos y lanzamientos. Ideal para quien disfruta más de superar sus propias marcas que de competir contra los demás. Aunque los rivales siempre existen.</p>
+          <div class="h5-title">Club de Artes Marciales</div>
+          <p>Kendo, judo, karate... Cada disciplina con su propia filosofía, todas comparten el espíritu de superación constante y el respeto como valor fundamental. El tipo de entrenamiento que enseña tanto dentro del tatami como fuera de él.</p>
+          <div class="h5-title">Club de Voleibol</div>
+          <p>Saques, remates y una coordinación de equipo que se nota sobre todo en los entrenamientos más exigentes. Aquí nadie juega solo, aunque a veces lo parezca.</p>
+          <div class="h5-title">Club de Arquería</div>
+          <p>Más que apuntar y disparar, la arquería es un arte centrado en la concentración, la postura correcta y la calma interior. Exigente en lo mental más que en lo físico.</p>
+          <div class="h5-title">Club de Arte</div>
+          <p>Pinceles, lienzos y proyectos que van desde lo abstracto hasta el hiperrealismo. Un espacio tranquilo para quienes prefieren expresarse sin necesidad de palabras.</p>
+          <div class="h5-title">Club de Música (banda y orquesta)</div>
+          <p>Ensayos, partituras y la ilusión de tocar juntos en algún evento importante de la academia o, si el grupo es suficientemente bueno, más allá de ella.</p>
+          <div class="h5-title">Club de Teatro y Danza</div>
+          <p>Guiones, ensayos y esa adrenalina particular de subirse a un escenario. Hay espacio tanto para la interpretación y la danza como para la dirección, el diseño de vestuario o la escenografía.</p>
+          <div class="h5-title">Club de Fotografía</div>
+          <p>Cámara en mano, buscando el ángulo perfecto por cada rincón de la academia y de la colonia. Ideal para los observadores, los que ven historias donde otros solo ven paisajes.</p>
+          <div class="h5-title">Club de Literatura</div>
+          <p>Lecturas, debates y, por qué no, algún intento más o menos serio de escribir la propia novela. Un rincón tranquilo para los amantes de las palabras en todas sus formas.</p>
+          <div class="h5-title">Club de Cocina y Repostería</div>
+          <p>Delantales, recetas de todos los sectores y algún desastre culinario ocasional que nadie reconoce haber causado. Perfecto para quien disfruta tanto del proceso como, sobre todo, del resultado.</p>
+          <div class="h5-title">Club de Ciencia</div>
+          <p>Experimentos, hipótesis y proyectos de todo tipo. La curiosidad científica por encima de todo, y la pregunta "¿y si probamos esto?" como motor constante.</p>
+          <div class="h5-title">Club de Ajedrez</div>
+          <p>Partidas en silencio, mucha estrategia y esos enfrentamientos que se alargan más de lo esperado. Las rivalidades que genera este club suelen ser más intensas de lo que parece a simple vista.</p>
+          <div class="h5-title">Club de Informática</div>
+          <p>Programación, proyectos tecnológicos y, de vez en cuando, alguna competición interna que no siempre termina de forma pacífica. Terreno natural para los amantes de la tecnología y el código.</p>
+          <div class="h5-title">Club de Eventos Paranormales</div>
+          <p>El club menos convencional del instituto. Investigan leyendas urbanas, fenómenos extraños y rumores varios sobre la academia y sus alrededores. Nadie se los toma demasiado en serio... hasta que algo no tiene explicación racional. Y entonces nadie sabe muy bien qué hacer.</p>
+        </div>
+      </section>
+      <!-- 3.2.1 CURSOS UNI -->
+      <section class="page-section" id="s-3-2-1">
+        <div class="page-static">
+          <div class="page-breadcrumb">Tsuki Gakkō / Universidad (Tsuki Daigaku) / Cursos y especialidades</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-graduation-cap"></i></div><div class="page-title-text"><h1>Cursos y especialidades</h1><p>Universidad — Tsuki Daigaku</p></div></div>
+        </div>
+        <div class="page-body">
+          <div class="h4-title">Cursos</div>
+          <table class="info-table">
+            <tr><th>Curso</th><th>Edad de entrada</th></tr>
+            <tr><td>1º</td><td>18-19 años</td></tr>
+            <tr><td>2º</td><td>19-20 años</td></tr>
+            <tr><td>3º</td><td>20-21 años</td></tr>
+            <tr><td>4º</td><td>21-22 años</td></tr>
+          </table>
+          <div class="h3-title">Especializaciones</div>
+          <div class="h4-title">Ciencia, Tecnología e Ingeniería</div>
+          <p>¿Te atraen los engranajes, el código o los misterios que esconde nuestra propia luna? Esta rama es la más técnica de todas, perfecta para mentes curiosas que quieran entender y mejorar el funcionamiento de New Nihon desde dentro.</p>
+          <table class="info-table">
+            <tr><th>Especialización</th><th>Descripción</th></tr>
+            <tr><td>Ingeniería de Selenita</td><td>Aprenderás a extraer, procesar y sacarle el máximo partido a la selenita, el recurso energético más importante de la colonia. La O.C.S. siempre está mirando de cerca a los mejores estudiantes de esta especialización.</td></tr>
+            <tr><td>Robótica y Sistemas Autónomos</td><td>Desde el mantenimiento y reparación de androides hasta el diseño del Sistema CAELUM. Mecánica avanzada, programación e inteligencia artificial.</td></tr>
+            <tr><td>Xenobiología Lunar</td><td>¿Tsukiboos? ¿Posibles formas de vida aún sin descubrir más allá de las cúpulas? Si la curiosidad científica te puede, esta es tu especialización. Advertencia: los tsukiboos no son sujetos de experimentación.</td></tr>
+            <tr><td>Arquitectura de Cúpulas</td><td>Ingeniería ambiental, sistemas de soporte vital, diseño estructural... Todo lo necesario para que estas cúpulas sigan en pie y la vida dentro de ellas sea posible. Fundamental. Y bastante infravalorada.</td></tr>
+            <tr><td>Biología Sintética y Adaptación</td><td>Adaptar, modificar e incluso crear organismos capaces de prosperar en las condiciones tan particulares de la luna. No está permitido experimentar con tsukiboos. En serio.</td></tr>
+          </table>
+          <div class="h4-title">Seguridad y Exploración</div>
+          <p>Disciplina, valentía y, sobre todo, mucho sentido del deber. No es una rama para todo el mundo, pero para quienes encajan en ella, pocas cosas dan más satisfacción. El S.E.D. recluta a la mayoría de sus efectivos directamente de aquí.</p>
+          <table class="info-table">
+            <tr><th>Especialización</th><th>Descripción</th></tr>
+            <tr><td>Criminología y Orden Público</td><td>La vía más directa para unirse a la policía militar del S.E.D. Investigación criminal, gestión de emergencias y conocimiento profundo de la normativa de la colonia.</td></tr>
+            <tr><td>Exploración y Cartografía Lunar</td><td>Para los que sueñan con ir más allá de la cúpula. Cartografía avanzada, gestión de expediciones y protocolos de seguridad para el exterior. Requiere excelente forma física y tolerancia al riesgo.</td></tr>
+            <tr><td>Estudios sobre Disonancias</td><td>Acceso restringido. Requisitos de admisión altos. Si consigues entrar, probablemente termines siendo Moon Hunter. Buena suerte.</td></tr>
+          </table>
+          <div class="h4-title">Economía y Sociedad</div>
+          <p>El neoyen no se mueve solo, ¡y la colonia tampoco se gestiona sola! Una rama ideal para mentes prácticas, negociadoras y con cabeza para los números... y el papeleo.</p>
+          <table class="info-table">
+            <tr><th>Especialización</th><th>Descripción</th></tr>
+            <tr><td>Administración y Comercio Interestelar</td><td>Gestión empresarial, comercio entre sectores y todo lo que implica mover neoyenes a gran escala.</td></tr>
+            <tr><td>Relaciones Interculturales y Diplomacia</td><td>Tres colonias, tres culturas, un solo hogar. Aprenderás a gestionar la convivencia y a resolver los conflictos que inevitablemente surgen cuando mundos muy distintos comparten espacio.</td></tr>
+            <tr><td>Derecho Lunar</td><td>Leyes, normativas, tratados y todo el entramado legal que mantiene New Nihon funcionando sin caos. Hay mucho más de lo que parece.</td></tr>
+            <tr><td>Historia Terrícola y Lunar</td><td>Todo lo que ocurrió en la Tierra antes de la colonización y todo lo que ha pasado aquí arriba desde entonces. Una especialización que ayuda a entender de dónde venimos para entender mejor dónde estamos.</td></tr>
+          </table>
+          <div class="h4-title">Arte y Comunicación</div>
+          <p>Música, moda, palabras e imágenes. Y la capacidad de hacer que tres idiomas distintos convivan sin que nadie se pierda por el camino. Perfecta para espíritus creativos y soñadores con talento.</p>
+          <table class="info-table">
+            <tr><th>Especialización</th><th>Descripción</th></tr>
+            <tr><td>Producción Musical e Idol</td><td>¿Sueñas con brillar en el Astral Link Festival? Composición, producción, gestión artística e industria del espectáculo. Y sí, también hay clases de interpretación.</td></tr>
+            <tr><td>Medios y Comunicación</td><td>Periodismo, traducción y gestión de la información en una colonia donde tres idiomas conviven a diario. Contar lo que pasa de forma clara y honesta es más difícil de lo que parece.</td></tr>
+            <tr><td>Diseño y Moda</td><td>Tendencias, creatividad y la oportunidad real de definir cómo viste media colonia. Getsumei, Starliberty y Yínchéng tienen estilos muy distintos. ¿Cuál es el tuyo?</td></tr>
+          </table>
+          <div class="h4-title">Salud y Bienestar</div>
+          <p>Cuerpo, mente y... circuitos. En una colonia donde conviven humanos, Thergen, cyborgs y androides, cuidar de la salud de todos no es tarea sencilla. Pero es de las más necesarias.</p>
+          <table class="info-table">
+            <tr><th>Especialización</th><th>Descripción</th></tr>
+            <tr><td>Medicina Humana y Thergen</td><td>Diagnóstico, tratamiento y fisiología en el entorno selenita, con especificidades para las distintas razas orgánicas de la colonia.</td></tr>
+            <tr><td>Cibermedicina</td><td>El mantenimiento y la salud de los cyborgs requiere conocimientos tanto médicos como de ingeniería. Una especialización única, y con una demanda creciente.</td></tr>
+            <tr><td>Psicología y Bienestar</td><td>Vivir a cientos de miles de kilómetros de la Tierra, sin poder volver, rodeado de personas muy distintas entre sí... no es poca cosa. La salud mental en New Nihon es un campo de trabajo enorme.</td></tr>
+            <tr><td>Veterinaria y Bienestar Animal</td><td>Cuidado de mascotas comunes y, por supuesto, de los queridísimos (y misteriosos) tsukiboos. Suele complementarse con conocimientos de Biología Lunar.</td></tr>
+          </table>
+        </div>
+      </section>
+      <!-- 3.2.2 ASIGNATURAS UNI -->
+      <section class="page-section" id="s-3-2-2">
+        <div class="page-static">
+          <div class="page-breadcrumb">Tsuki Gakkō / Universidad (Tsuki Daigaku) / Asignaturas</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-book-open-reader"></i></div><div class="page-title-text"><h1>Asignaturas</h1><p>Universidad — Tsuki Daigaku</p></div></div>
+        </div>
+        <div class="page-body">
+          <div class="h4-title">Troncales (comunes a todas las especializaciones)</div>
+          <table class="info-table">
+            <tr><th>Asignatura</th><th>Descripción</th><th>Curso</th></tr>
+            <tr><td>Historia de New Nihon</td><td>Desde el Stargaze Project hasta la actualidad: los hitos, los conflictos y los acuerdos que han dado forma a la colonia tal y como la conocemos hoy</td><td>1º</td></tr>
+            <tr><td>Japonés Avanzado</td><td>Perfeccionamiento del idioma común de la colonia, con énfasis en el lenguaje formal, académico y profesional</td><td>1º</td></tr>
+            <tr><td>Ética y Convivencia Selenita</td><td>Normas de convivencia entre razas y sectores, dilemas éticos cotidianos y el marco de derechos vigente en la colonia</td><td>1º</td></tr>
+            <tr><td>Introducción al Sistema CAELUM</td><td>Funcionamiento básico del sistema de inteligencia artificial climática que gestiona las cúpulas de New Nihon</td><td>1º</td></tr>
+            <tr><td>Economía y Neoyen</td><td>Fundamentos del sistema monetario y económico de la colonia, incluyendo la historia del neoyen y su relación con la economía terrícola</td><td>2º</td></tr>
+          </table>
+          <div class="h4-title">Ciencia, Tecnología e Ingeniería</div>
+          <table class="info-table">
+            <tr><th>Asignatura</th><th>Especialización</th><th>Curso</th></tr>
+            <tr><td>Fundamentos de Programación</td><td>General</td><td>1º</td></tr>
+            <tr><td>Física Aplicada a Entornos Lunares</td><td>General</td><td>1º</td></tr>
+            <tr><td>Química de Materiales</td><td>General</td><td>1º</td></tr>
+            <tr><td>Geología de Selenita</td><td>Ingeniería de Selenita</td><td>2º</td></tr>
+            <tr><td>Procesos de Extracción y Refinado</td><td>Ingeniería de Selenita</td><td>2º</td></tr>
+            <tr><td>Energía y Aplicaciones Industriales</td><td>Ingeniería de Selenita</td><td>3º</td></tr>
+            <tr><td>Gestión de Recursos Energéticos</td><td>Ingeniería de Selenita</td><td>4º</td></tr>
+            <tr><td>Mecánica de Sistemas Autónomos</td><td>Robótica y Sistemas Autónomos</td><td>2º</td></tr>
+            <tr><td>Inteligencia Artificial Aplicada</td><td>Robótica y Sistemas Autónomos</td><td>2º</td></tr>
+            <tr><td>Ética de la IA y Derechos de los Androides</td><td>Robótica y Sistemas Autónomos</td><td>3º</td></tr>
+            <tr><td>Diseño y Mantenimiento de Sistemas Complejos</td><td>Robótica y Sistemas Autónomos</td><td>4º</td></tr>
+            <tr><td>Fauna y Flora Lunar</td><td>Xenobiología Lunar</td><td>2º</td></tr>
+            <tr><td>Métodos de Campo en Exobiología</td><td>Xenobiología Lunar</td><td>3º</td></tr>
+            <tr><td>Conservación de Ecosistemas Artificiales</td><td>Xenobiología Lunar</td><td>4º</td></tr>
+            <tr><td>Cultivo en Entornos Controlados</td><td>Biología Sintética y Adaptación</td><td>2º</td></tr>
+            <tr><td>Ingeniería Genética Aplicada</td><td>Biología Sintética y Adaptación</td><td>3º</td></tr>
+            <tr><td>Bioética y Regulación Científica</td><td>Biología Sintética y Adaptación</td><td>4º</td></tr>
+            <tr><td>Ingeniería Estructural Lunar</td><td>Arquitectura de Cúpulas</td><td>2º</td></tr>
+            <tr><td>Sistemas de Soporte Vital</td><td>Arquitectura de Cúpulas</td><td>3º</td></tr>
+            <tr><td>Diseño Urbano y Expansión de Colonias</td><td>Arquitectura de Cúpulas</td><td>4º</td></tr>
+          </table>
+          <div class="h4-title">Seguridad y Exploración</div>
+          <table class="info-table">
+            <tr><th>Asignatura</th><th>Especialización</th><th>Curso</th></tr>
+            <tr><td>Legislación de Seguridad Lunar</td><td>General</td><td>1º</td></tr>
+            <tr><td>Defensa Personal y Táctica Básica</td><td>General</td><td>1º</td></tr>
+            <tr><td>Primeros Auxilios en Emergencias</td><td>General</td><td>2º</td></tr>
+            <tr><td>Investigación Criminal</td><td>Criminología y Orden Público</td><td>2º</td></tr>
+            <tr><td>Psicología Criminal y Perfilación</td><td>Criminología y Orden Público</td><td>3º</td></tr>
+            <tr><td>Gestión de Operaciones de Seguridad</td><td>Criminología y Orden Público</td><td>4º</td></tr>
+            <tr><td>Cartografía Lunar Avanzada</td><td>Exploración y Cartografía Lunar</td><td>2º</td></tr>
+            <tr><td>Planificación de Expediciones</td><td>Exploración y Cartografía Lunar</td><td>3º</td></tr>
+            <tr><td>Supervivencia en el Exterior</td><td>Exploración y Cartografía Lunar</td><td>3º</td></tr>
+            <tr><td>Operaciones en Entornos Hostiles</td><td>Exploración y Cartografía Lunar</td><td>4º</td></tr>
+            <tr><td>Protocolos de Actuación ante Disonancias</td><td>Estudios sobre Disonancias</td><td>3º</td></tr>
+            <tr><td>Análisis de Fenómenos Anómalos</td><td>Estudios sobre Disonancias</td><td>4º</td></tr>
+          </table>
+          <div class="h4-title">Economía y Sociedad</div>
+          <table class="info-table">
+            <tr><th>Asignatura</th><th>Especialización</th><th>Curso</th></tr>
+            <tr><td>Fundamentos de Gestión Empresarial</td><td>General</td><td>1º</td></tr>
+            <tr><td>Comercio Interestelar y Logística</td><td>Administración y Comercio</td><td>2º</td></tr>
+            <tr><td>Contabilidad y Finanzas Aplicadas</td><td>Administración y Comercio</td><td>2º</td></tr>
+            <tr><td>Estrategia Empresarial</td><td>Administración y Comercio</td><td>4º</td></tr>
+            <tr><td>Historia y Cultura Comparada de los Tres Sectores</td><td>Relaciones Interculturales y Diplomacia</td><td>2º</td></tr>
+            <tr><td>Mediación y Resolución de Conflictos</td><td>Relaciones Interculturales y Diplomacia</td><td>3º</td></tr>
+            <tr><td>Política y Gobernanza en New Nihon</td><td>Relaciones Interculturales y Diplomacia</td><td>4º</td></tr>
+            <tr><td>Derecho Constitucional Lunar</td><td>Derecho Lunar</td><td>2º</td></tr>
+            <tr><td>Derecho de Androides, Cyborgs y Razas No Humanas</td><td>Derecho Lunar</td><td>3º</td></tr>
+            <tr><td>Jurisprudencia y Casos Prácticos</td><td>Derecho Lunar</td><td>4º</td></tr>
+            <tr><td>Historia Terrícola Clásica y Moderna</td><td>Historia Terrícola y Lunar</td><td>1º</td></tr>
+            <tr><td>La Fundación de New Nihon y el Stargaze Project</td><td>Historia Terrícola y Lunar</td><td>2º</td></tr>
+            <tr><td>Evolución Social y Cultural de la Colonia</td><td>Historia Terrícola y Lunar</td><td>3º</td></tr>
+            <tr><td>Sucesos Recientes y Perspectivas de Futuro</td><td>Historia Terrícola y Lunar</td><td>4º</td></tr>
+          </table>
+          <div class="h4-title">Arte y Comunicación</div>
+          <table class="info-table">
+            <tr><th>Asignatura</th><th>Especialización</th><th>Curso</th></tr>
+            <tr><td>Historia del Arte y la Música en New Nihon</td><td>General</td><td>1º</td></tr>
+            <tr><td>Composición Musical y Producción</td><td>Producción Musical e Idol</td><td>2º</td></tr>
+            <tr><td>Industria del Espectáculo y Gestión Artística</td><td>Producción Musical e Idol</td><td>3º</td></tr>
+            <tr><td>Interpretación Escénica y Presencia</td><td>Producción Musical e Idol</td><td>3º</td></tr>
+            <tr><td>Marketing y Branding Personal</td><td>Producción Musical e Idol</td><td>4º</td></tr>
+            <tr><td>Periodismo y Redacción Avanzada</td><td>Medios y Comunicación</td><td>2º</td></tr>
+            <tr><td>Traducción e Interpretación Simultánea</td><td>Medios y Comunicación</td><td>3º</td></tr>
+            <tr><td>Comunicación de Crisis y Gestión de la Información</td><td>Medios y Comunicación</td><td>4º</td></tr>
+            <tr><td>Fundamentos del Diseño de Moda</td><td>Diseño y Moda</td><td>2º</td></tr>
+            <tr><td>Tendencias, Consumo y Cultura Visual</td><td>Diseño y Moda</td><td>3º</td></tr>
+            <tr><td>Proyecto de Colección Final</td><td>Diseño y Moda</td><td>4º</td></tr>
+          </table>
+          <div class="h4-title">Salud y Bienestar</div>
+          <table class="info-table">
+            <tr><th>Asignatura</th><th>Especialización</th><th>Curso</th></tr>
+            <tr><td>Anatomía Humana y Thergen Comparada</td><td>General</td><td>1º</td></tr>
+            <tr><td>Ética Médica en Entornos Multirraciales</td><td>General</td><td>1º</td></tr>
+            <tr><td>Diagnóstico Clínico</td><td>Medicina Humana y Thergen</td><td>2º</td></tr>
+            <tr><td>Urgencias y Emergencias Médicas</td><td>Medicina Humana y Thergen</td><td>3º</td></tr>
+            <tr><td>Patologías Seleníticas (acceso restringido)</td><td>Medicina Humana y Thergen</td><td>4º</td></tr>
+            <tr><td>Mecánica de Implantes y Prótesis</td><td>Cibermedicina</td><td>2º</td></tr>
+            <tr><td>Interfaz Hombre-Máquina</td><td>Cibermedicina</td><td>3º</td></tr>
+            <tr><td>Mantenimiento y Reparación de Sistemas Cyborg</td><td>Cibermedicina</td><td>4º</td></tr>
+            <tr><td>Anatomía Animal y Lunar</td><td>Veterinaria y Bienestar Animal</td><td>2º</td></tr>
+            <tr><td>Patologías de Especies Lunares</td><td>Veterinaria y Bienestar Animal</td><td>3º</td></tr>
+            <tr><td>Etología y Comportamiento Animal en Cautividad</td><td>Veterinaria y Bienestar Animal</td><td>4º</td></tr>
+            <tr><td>Psicología Clínica y Evaluación</td><td>Psicología y Bienestar</td><td>2º</td></tr>
+            <tr><td>Psicología del Aislamiento y la Adaptación</td><td>Psicología y Bienestar</td><td>3º</td></tr>
+            <tr><td>Intervención en Crisis y Trauma</td><td>Psicología y Bienestar</td><td>4º</td></tr>
+          </table>
+        </div>
+      </section>
+      <!-- 3.2.3 CLUBES UNI -->
+      <section class="page-section" id="s-3-2-3">
+        <div class="page-static">
+          <div class="page-breadcrumb">Tsuki Gakkō / Universidad (Tsuki Daigaku) / Clubes</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-people-group"></i></div><div class="page-title-text"><h1>Clubes</h1><p>Universidad — Tsuki Daigaku</p></div></div>
+        </div>
+        <div class="page-body">
+          <div class="h5-title">Periódico / Revista Universitaria</div>
+          <p>Más serio y elaborado que la versión del instituto, aunque sin perder del todo cierto morbo por los cotilleos del campus. Noticias, reportajes en profundidad y opinión sobre la vida en la universidad y en la colonia en general.</p>
+          <div class="h5-title">Club de Música</div>
+          <p>Ensayos, conciertos improvisados en los pasillos y la meta colectiva de tocar en algo grande. El Astral Link Festival no es para todos, pero soñar no cuesta nada.</p>
+          <div class="h5-title">Club de Teatro y Danza</div>
+          <p>Producciones más ambiciosas que en el instituto, con montajes propios, dramaturgias originales y mucha más libertad creativa. El escenario del auditorio del campus ha visto de todo.</p>
+          <div class="h5-title">Club de Fotografía</div>
+          <p>Salidas por los distintos sectores en busca de la imagen perfecta. Un espacio relajado para quienes ven historias donde otros solo ven paisajes.</p>
+          <div class="h5-title">Club de Moda y Diseño</div>
+          <p>Diseño de prendas, pequeños desfiles dentro del campus y la oportunidad de experimentar con estilos propios lejos de los encargos académicos.</p>
+          <div class="h5-title">Club de Videojuegos</div>
+          <p>Torneos, partidas en grupo y debates eternos sobre qué juego es objetivamente mejor. (Spoiler: nadie se pone de acuerdo.)</p>
+          <div class="h5-title">Club de Fútbol</div>
+          <p>Partidos recreativos o más competitivos, según el ambiente del año. La rivalidad entre sectores se traslada inevitablemente al campo.</p>
+          <div class="h5-title">Club de Baloncesto</div>
+          <p>Entrenamientos más flexibles que en el instituto y partidos amistosos entre facultades que, a veces, no son tan amistosos.</p>
+          <div class="h5-title">Club de Debate</div>
+          <p>Argumentación, oratoria y discusiones sobre temas que van desde la política lunar hasta dilemas éticos de actualidad. El nivel sube considerablemente respecto a lo que se veía en el instituto.</p>
+          <div class="h5-title">Club de Emprendimiento y Negocios</div>
+          <p>Ideas de negocio, proyectos conjuntos y mucha cabeza puesta en el neoyen. Algunos de los negocios más interesantes de la colonia empezaron como proyectos de este club.</p>
+          <div class="h5-title">Club de Robótica y Tecnología</div>
+          <p>Proyectos propios de mecánica, programación e inteligencia artificial, con frecuentes competiciones internas y algún que otro enfrentamiento extraoficial con clubs de otras instituciones.</p>
+          <div class="h5-title">Club de Investigación</div>
+          <p>Grupos reducidos que funcionan casi como seminarios o pequeños laboratorios, profundizando en temas específicos según la especialización de sus miembros. La línea entre "club" y "proyecto de tesis" es difusa.</p>
+        </div>
+      </section>
+      <!-- 3.3 UNIFORME -->
+      <section class="page-section" id="s-3-3">
+        <div class="page-static">
+          <div class="page-breadcrumb">Tsuki Gakkō / Uniforme</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-shirt"></i></div><div class="page-title-text"><h1>Uniforme</h1><p>El atuendo oficial de Tsuki Gakkō</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>El uniforme para el instituto y la universidad son iguales a excepción del tipo de banda/complemento que portan.</p>
+          <ul>
+            <li>Para los estudiantes de instituto (Tsuki Kōkō), su color oficial es el <strong>rosa pastel</strong>.</li>
+            <li>Para los estudiantes de universidad (Tsuki Daigaku), su color oficial es el <strong>amarillo</strong>.</li>
+          </ul>
+          <p>En todos los uniformes, sean de estudiantes o trabajadores de la Tsuki Gakkō, puede verse su emblema oficial.</p>
+        </div>
+      </section>
+      <!-- 3.4 -->
+      <section class="page-section" id="s-3-4">
+        <div class="page-static"><div class="page-breadcrumb">Tsuki Gakkō / Vida en la cúpula académica</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-mug-hot"></i></div><div class="page-title-text"><h1>Vida en la cúpula académica</h1><p>Ocio y vivienda</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-mug-hot"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+      <!-- 4.1 -->
+      <section class="page-section" id="s-4-1">
+        <div class="page-static"><div class="page-breadcrumb">Sistemas / Sistema de puntos</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-chart-bar"></i></div><div class="page-title-text"><h1>Sistema de puntos</h1><p>Mecánica de progresión del foro</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-chart-bar"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+      <!-- 4.2 -->
+      <section class="page-section" id="s-4-2">
+        <div class="page-static"><div class="page-breadcrumb">Sistemas / Sistema monetario</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-coins"></i></div><div class="page-title-text"><h1>Sistema monetario</h1><p>El neoyen en el foro</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-coins"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+      <!-- 4.3 NEWGOCHI -->
+      <section class="page-section" id="s-4-3">
+        <div class="page-static">
+          <div class="page-breadcrumb">Sistemas / Newgochi</div>
+          <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-paw"></i></div><div class="page-title-text"><h1>Newgochi</h1><p>Tu mascota virtual del foro</p></div></div>
+        </div>
+        <div class="page-body">
+          <p>¡Felicidades por adoptar a tu nueva mascota virtual! Observa cómo evoluciona a medida que tú mismo/a avanzas en el foro, desde sus etapas iniciales como un diminuto huevo, hasta convertirse en adulto grande y sano.</p>
+          <div class="h4-title">Funcionamiento</div>
+          <div class="h5-title">Mascota</div>
+          <p>Los newgochi tienen cuatro etapas a lo largo de su vida: huevo, niñez, adolescencia y adultez. Para que crezca, necesitarás completar ciertos requisitos tanto de post, como de tiempo en el foro.</p>
+          <p>No serán válidos post de una evolución a otra. Tampoco contarán los post off-rol ni autoconclusivos (oficios).</p>
+          <div class="h5-title">Evolución</div>
+          <table class="info-table">
+            <tr><th>Etapa</th><th>Tiempo requerido</th><th>Post de rol</th></tr>
+            <tr><td>Huevo → Niño</td><td>1 mes desde la compra de la mascota</td><td>10 post</td></tr>
+            <tr><td>Niño → Adolescente</td><td>6 meses desde la compra de la mascota</td><td>10 post</td></tr>
+            <tr><td>Adolescente → Adulto</td><td>12 meses desde la compra de la mascota</td><td>20 post</td></tr>
+            <tr><td>Adulto → Anciano</td><td>18 meses desde la compra de la mascota</td><td>20 post</td></tr>
+          </table>
+          <div class="h5-title">Formularios</div>
+          <div class="h6-title">Compra</div>
+          <p>Nombre de la mascota: · Tipo de huevo (enlace a la lista de disponibles): · Fecha de registro de la cuenta:</p>
+          <div class="h6-title">Evolución</div>
+          <p>Fecha de registro de la cuenta: · Requisito de post (los enlaces van aquí, sin ningún bbcode):</p>
+          <div class="h4-title">Listado de Newgochi</div>
+          <p>Próximamente.</p>
+        </div>
+      </section>
+      <!-- 4.4 -->
+      <section class="page-section" id="s-4-4">
+        <div class="page-static"><div class="page-breadcrumb">Sistemas / Oficios y trabajos a medio tiempo</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-briefcase"></i></div><div class="page-title-text"><h1>Oficios y trabajos a medio tiempo</h1><p>Actividades remuneradas para tu personaje</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-briefcase"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+      <!-- 4.5 -->
+      <section class="page-section" id="s-4-5">
+        <div class="page-static"><div class="page-breadcrumb">Sistemas / Tienda</div><div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-store"></i></div><div class="page-title-text"><h1>Tienda</h1><p>Artículos disponibles en el foro</p></div></div></div>
+        <div class="page-body placeholder-body"><i class="fa-solid fa-store"></i><h2>Próximamente</h2><p>Contenido en construcción.</p></div>
+      </section>
+
+    </div><!-- /content-box -->
+  </div><!-- /main-panel -->
+</div><!-- /wrapper -->
+
+<script>
+  function activateSection(target) {
+    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+    const panel = document.getElementById(target);
+    if (panel) {
+      panel.classList.add('active');
+      const body = panel.querySelector('.page-body');
+      if (body) body.scrollTop = 0;
+    }
+    document.querySelectorAll('.nav-item[data-target]').forEach(el => el.classList.remove('active'));
+    const navItem = document.querySelector(`.nav-item[data-target="${target}"]`);
+    if (navItem) navItem.classList.add('active');
+    const breadcrumb = panel ? panel.querySelector('.page-breadcrumb') : null;
+    const url = breadcrumb
+      ? 'https://newnihon-guidelines.../' + breadcrumb.textContent.trim().toLowerCase().replace(/\s*\/\s*/g,'/').replace(/[\s.]+/g,'-').replace(/[^\w\-\/áéíóúüñ]/g,'')
+      : 'https://newnihon-guidelines.../' + target;
+    document.getElementById('topbar-url-text').textContent = url;
+    document.getElementById('sidebar-nav').classList.remove('mobile-open');
+  }
+
+  document.querySelectorAll('.nav-item[data-target]').forEach(item => {
+    item.addEventListener('click', () => activateSection(item.dataset.target));
+  });
+
+  document.querySelectorAll('[id^="toggle-"]').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const sub = document.getElementById('sub-' + toggle.id.replace('toggle-', ''));
+      if (!sub) return;
+      const open = sub.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+    });
+  });
+
+  document.getElementById('mobile-toggle').addEventListener('click', () => {
+    document.getElementById('sidebar-nav').classList.toggle('mobile-open');
+  });
+
+  activateSection('s-1-1');
+</script>
+</body>
+</html>
