@@ -111,7 +111,7 @@
     .page-title-text h1 { font-size: 20px; font-weight: 800; color: var(--negro-oscuro); text-transform: uppercase; letter-spacing: 0.02em; line-height: 1.1; }
     .page-title-text p { font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.3); margin-top: 3px; }
     /* SCROLLABLE BODY */
-    .page-body { flex: 1; min-height: 0; overflow-y: auto; padding: 20px 32px 32px; font-size: 13px; line-height: 1.75; color: #444; scrollbar-width: thin; scrollbar-color: #ddd transparent; }
+    .page-body { flex: 1; min-height: 0; overflow-y: auto; padding: 20px 60px 60px; font-size: 13px; line-height: 1.75; text-align:justify;color: #444; scrollbar-width: thin; scrollbar-color: #ddd transparent; }
     .page-body::-webkit-scrollbar { width: 5px; }
     .page-body::-webkit-scrollbar-thumb { background: #ddd; border-radius: 3px; }
     .page-body p { margin-bottom: 14px; }
@@ -134,8 +134,8 @@
     .info-table tr:last-child td { border-bottom: none; }
     .info-table tr:hover td { background: rgba(179,226,245,0.07); }
     /* ERROR BLOCK */
-    .error-block { background: #1a1a1a; border: 1px solid rgba(220,142,194,0.3); border-radius: 6px; padding: 14px 16px; margin: 14px 0; font-family: monospace; font-size: 11px; color: rgba(220,142,194,0.8); line-height: 1.7; }
-    .error-block .error-header { color: var(--rosa); font-weight: bold; margin-bottom: 6px; }
+    .error-block { background: #1a1a1a; border: 1px solid rgba(220,142,194,0.3); border-radius: 6px; padding: 14px 16px; margin: 14px 0; font-family: courier new; font-size: 12px; color: rgba(220,142,194,0.8); line-height: 1.7; }
+    .error-block .error-header { color: var(--rosa); font-weight: bold; margin-bottom: 6px;letter-spacing:1px }
     /* CLASSIFIED */
     .classified-block { background: linear-gradient(135deg, rgba(220,142,194,0.08), rgba(179,226,245,0.08)); border: 1px solid rgba(220,142,194,0.25); border-radius: 6px; padding: 16px; margin: 14px 0; }
     .classified-tag { display: inline-block; background: var(--rosa); color: #fff; font-size: 9px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; margin-bottom: 10px; }
@@ -225,7 +225,7 @@
         <div class="nav-item" data-target="s-2-7-8"><span class="nav-label">Modas</span></div>
         <div class="nav-item" data-target="s-2-7-9"><span class="nav-label">Índice de criminalidad</span></div>
         <div class="nav-item" data-target="s-2-7-10"><span class="nav-label">Los habitantes: Tsukiboos</span></div>
-        <div class="nav-item" data-target="s-2-7-11"><span class="nav-label">[CONF.] Disonancias</span></div>
+        <div class="nav-item" data-target="s-2-7-11"><span class="nav-label" style="font-family:courier new;">[CONFIDENCIAL] Disonancias</span></div>
         <div class="nav-item" data-target="s-2-7-12"><span class="nav-label">Curiosidades</span></div>
       </div>
       <div class="nav-section-label" style="margin-top:10px;">Tsuki Gakkō</div>
@@ -467,7 +467,7 @@
           <p>La arquitectura de Yínchéng está muy influenciada por la China clásica, con templos de madera, techos a dos aguas y tejas cerámicas de tonos terrosos. Prima también el metálico y, sobre todo, el dorado, signo de su idea de prosperidad.</p>
           <p>En este sector se encuentra la base del Selenic Investigation Department (S.E.D), encargados de la seguridad de New Nihon frente a la amenaza de…</p>
           <div class="error-block">
-            <div class="error-header">«  «  «  «  « «<br>» »» » -  » » E - R - R - O - R  «  « «<br>I N F O R M A C I Ó N  » »» »<br> »   »»  » » »  C O N F I D E N C I A L » »» » -  »<br>    »   »»  » » »</div>
+            <div class="error-header"><center>«  «  «  «  « «<br>» »» » -  » » E - R - R - O - R  «  « «<br>I N F O R M A C I Ó N  » »» »<br> »   »»  » » »  C O N F I D E N C I A L » »» » -  »<br>    »   »»  » » »</center></div>
           </div>
           <p><em>Ju-jum</em><br>Discúlpame, al parecer he intentado hablar más de la cuenta…<br>¡Pero no te preocupes! No es nada tan importante.</p>
           <p>Como decía, el S.E.D. tiene como prioridad la seguridad de la ciudadanía de New Nihon, por lo que su institución, ligada al tripartito, está subdividida entre la policía militar, que actúa en casos de emergencias graves, el equipo de investigación y exploración de la luna, para proponer y crear proyectos de expansión, y los Moon Hunters, una unidad especializada en tratar con las disonancias.</p>
@@ -484,7 +484,7 @@
         </div>
         <div class="page-body">
           <p>Si las tres grandes cúpulas son el corazón de New Nihon, el extrarradio sería… bueno, todo lo que hace que ese corazón siga latiendo.</p>
-          <p>Más allá de Getsumei, Starliberty y Yínchéng se encuentra esta enorme región, dedicada a la extracción de recursos y el mantenimiento de las infraestructuras de la colonia. Aquí no hay centros comerciales repletos de gente ni avenidas iluminadas por neones, sino minas de selenita, instalaciones industriales y kilómetros de paisaje lunar que recuerdan que, por mucho que hayamos convertido este lugar en nuestro hogar, seguimos viviendo sobre un satélite.</p>
+          <p>Más allá de Getsumei, Starliberty y Yínchéng se encuentra esta enorme región, dedicada a la extracción de recursos y el mantenimiento de las infraestructuras de la colonia. Aquí no hay centros comerciales repletos de gente ni avenidas iluminadas por neones, sino minas de selenita, instalaciones industriales y kilómetros de paisaje lunar que recuerdan que, por mucho que hayamos convertido la Luna en nuestro hogar, seguimos viviendo sobre un satélite.</p>
           <p>El asentamiento más conocido es Craterhom, un pueblo levantado por aquellos que han decidido vivir al margen del sistema. Sus habitantes tienen algo en común: valoran su libertad por encima de casi cualquier cosa; algunos llegaron huyendo para empezar de cero y, otros, simplemente nunca compartieron el estilo de vida de la colonia.</p>
           <p>¿Eh? ¿Que cómo los ven desde las tres cúpulas? Pueeeeees… la verdad, depende de a quién preguntes. Hay quienes los consideran simples disidentes y quienes los señalan directamente como delincuentes. La realidad, como casi siempre, es bastante menos sencilla. Lo que sí está claro es que la mina sobre la que se encuentra Craterhom los ha enfrentado durante años con la O.C.S., que nunca ha ocultado su intención de recuperar el control del yacimiento. Sip, digamos que las relaciones diplomáticas no pasan por su mejor momento.</p>
         </div>
@@ -720,11 +720,24 @@
           <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-coins"></i></div><div class="page-title-text"><h1>Economía</h1><p>El neoyen y el sistema económico de la colonia</p></div></div>
         </div>
         <div class="page-body">
-          <p>¡Hola! Soy Tsuki-A, tu guía personal en New Nihon. ¡Ya llevamos un rato juntos, y creo que te has dado cuenta de lo importante que es el aspecto económico en nuestra colonia! ¿Te has fijado en que todos pagamos con la misma moneda?</p>
-          <p>Al principio, cada sector usaba su propia moneda: yuanes, yenes, dólares... Y, como puedes imaginar, ¡era un lío enorme! Así que, tras muchas reuniones (y probablemente más de un dolor de cabeza), se tomó una decisión histórica: tener una moneda única.</p>
-          <p>Así nació el <strong>neoyen</strong>, la moneda oficial de New Nihon y la cual rige todas y cada una de las transacciones de la colonia: desde los grandes acuerdos comerciales entre corporaciones hasta una bebida fresquita tras un largo paseo bajo cualquiera de las cúpulas. (¡Que sí, que pago en metálico! ¡Los neoyenes también existen en papel moneda!)</p>
-          <p>En New Nihon hay oficios de toda clase, desde dependientes a policías o bomberos, o incluso exploradores (O.C.S.), Moon Hunters y científicos (S.E.D.). Y dentro de todo el entramado de la ciudad, la Tsuki Gakkō también ha querido hacer su parte a través de convenios con las tiendas cercanas para impulsar la contratación de gente joven.</p>
-          <p>Así, los comercios dentro de la cúpula donde se encuentra la escuela tienen por obligación aceptar cláusulas para dichas contrataciones, siendo las más relevantes, la de asegurar que los estudiantes no trabajen más de cinco horas diarias para que puedan compatibilizar el trabajo con los estudios, y un sueldo mínimo de 200¥ al mes.</p>
+<p>¡Oh! ¡Veo que también te interesa algo tan terrenal como el dinero!</p>
+<p>No te preocupes, ¡prometo no ponerme demasiado técnica!</p>
+
+<p>Al principio, cada sector usaba su propia moneda. Ya sabes: yuanes por aquí, yenes por allá, dólares flotando por en medio... Vaya, lo que se dice un auténtico dolor de cabeza para comerciantes, viajeros y, bueno, para cualquiera con bolsillos. Así que, tras muchas pero que muuuuuuchas reuniones (y alguna que otra discusión acalorada, según mis archivos), se tomó una decisión histórica: la de tener una moneda única. Más sencillo, más rápido y, sobre todo, mucho más práctico.</p>
+
+<p>Así nació el neoyen, la moneda oficial de New Nihon y la cual rige todas y cada una de las transacciones de la colonia: desde los grandes acuerdos comerciales entre corporaciones hasta una bebida fresquita tras un largo paseo bajo cualquiera de las cúpulas.</p>
+
+<p>Entre tú y yo, no importa de dónde vengas, mientras tengas neoyenes, siempre habrá algo esperándote al otro lado del mostrador.</p>
+
+<p>Pero ahora la pregunta del millón, ¿Cómo se consiguen los Neoyenes?</p>
+
+<p>Pues trabajando, claro está. En New Nihon hay oficios de toda clase, desde dependientes a policías o bomberos, o incluso exploradores (O. C. S.), Moon Hunters y científicos (S. E. D)… Evidentemente, para todos ellos necesitas ser mayor de edad y tener un mínimo de estudios, pero la Tsuki Gakkō también ofrece convenios con las tiendas cercanas para impulsar la contratación de gente joven y ayudarla económicamente.</p>
+
+<p>De hecho, ¿Sabías que los comercios dentro de la cúpula donde se encuentra la escuela, tienen por obligación aceptar cláusulas para dichas contrataciones? No tienen permitido abrir ningún comercio a menos que aseguren que cumplirán con una cuota de contratación de personal estudiantil respecto a empleados normales. Además, deben acatar normativas que aseguren que los estudiantes no trabajen más de cinco horas, y un sueldo mínimo de 200¥ al mes.</p>
+
+          <p>¿Te interesa?</p>
+<p>Entonces dale click a este enlace a continuación. Te explicaré cómo puedes mandar tu CV:</p>
+          <p><a href="/">Oficios</a></p>
         </div>
       </section>
       <!-- 2.7.4 TRANSPORTES -->
@@ -735,10 +748,17 @@
           <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-train-subway"></i></div><div class="page-title-text"><h1>Medios de transporte</h1><p>Cómo moverse por la colonia</p></div></div>
         </div>
         <div class="page-body">
-          <p>¡Ah, el transporte! Uno de mis temas favoritos. ¿Sabías que New Nihon tiene una red de transporte público bastante completa?</p>
-          <p>En la colonia encontrarás coches y tranvías, perfectamente integrados en la estructura de cada sector. Para los que prefieren algo más rápido, también contamos con autobuses y una red de metro subterráneo que conecta las zonas más transitadas. ¡Así que no hay excusa para llegar tarde a ningún sitio!</p>
-          <p>Y hay un detalle importante que debes tener en cuenta: en toda New Nihon se conduce por el mismo lado, <strong>por la derecha</strong>. Puede parecer una tontería, pero al principio de la colonización, ¡era un auténtico caos! Al igual que con la moneda, se decidió unificar también las normas de circulación para facilitar la convivencia entre los tres sectores.</p>
-          <p>Los pasos entre cúpulas son, probablemente, de las zonas más seguras de New Nihon. Las entradas entre sectores están vigiladas por el S.E.D. y las propias puertas son muy resistentes, construidas con materiales de alta resistencia para garantizar la seguridad de la colonia en todo momento. Así que no te preocupes, ¡puedes moverte con total tranquilidad!</p>
+      <p>¿Coches voladores? ¿Plataformas antigravedad surcando los cielos?</p>
+
+<p>Y es que, si hablamos de movernos por New Nihon, quizá esperabas algo espectacular, ¿verdad?</p>
+
+<p>Já... Siento desilusionarte.</p>
+
+<p>Aquí nos desplazamos de una forma bastante [i]normal[/i]. En la colonia encontrarás coches y tranvías, perfectamente integrados en la estructura de cada sector. También contamos con autobuses y una red de metro subterráneo que conecta las zonas más transitadas. Práctico, eficiente y, según mis desarrolladores, mucho más seguro que andar esquivando el tráfico aéreo.</p>
+
+<p>¡Ah! Hay un detalle importante que deberías de saber antes de ponerte al volante: en toda New Nihon se conduce por el mismo lado, por la derecha. Nada de excepciones por sector o herencias terrestres. Al igual que con la moneda, se decidió unificar las normas de circulación para facilitar la convivencia y evitar... accidentes diplomáticos. Créeme, ¡los semáforos lo agradecen!</p>
+
+<p>Por cierto, ¿Sabías que los pasos entre cúpulas son de las zonas más seguras de New Nihon? Las entradas entre sectores están súper vigiladas por el S.E.D para evitar cualquier accidente, pero es que además, las propias puertas son mega fuertes, y los túneles (aunque transcurren por el exterior), pese a su tamaño reducido en comparación con las cúpulas, son muy gruesos.</p>
         </div>
       </section>
       <!-- 2.7.5 VIAJES AL EXTERIOR -->
@@ -749,20 +769,28 @@
           <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-helmet-safety"></i></div><div class="page-title-text"><h1>Viajes al exterior</h1><p>Más allá de la cúpula</p></div></div>
         </div>
         <div class="page-body">
-          <p>New Nihon se asienta en la cara visible de la Luna. Más allá de los límites transparentes que nos protegen se extiende un paisaje gris, silencioso y todavía sin colonizar, al menos en gran medida.</p>
-          <p>Para viajar al exterior de la cúpula es necesario un permiso especial emitido por las autoridades correspondientes, además de equipamiento certificado: trajes presurizados, suministro de oxígeno, sistemas de comunicación de largo alcance... Afuera no hay atmósfera que respire, y la temperatura puede caer hasta los -170°C en zonas de sombra. No es un paseo campestre, precisamente.</p>
-          <p>El acceso está estrictamente restringido a personal autorizado, misiones científicas y operaciones muy concretas aprobadas por el tripartito. Actualmente, el turismo lunar no es una opción disponible para el ciudadano común, aunque hay quienes llevan años presionando para que eso cambie.</p>
+<p>Tras toda esta explicación, quizá tengas una última pregunta: ¿Qué hay más allá de la cúpula?</p>
+
+<p>Verás, New Nihon se asienta en la cara visible de la Luna. Más allá de los límites transparentes que nos protegen se extiende un paisaje gris, silencioso y todavía sin colonizar. ¿Bonito? ¡Sin lugar a dudas ♡! Pero también desconocido.</p>
+
+<p>Para viajar al exterior es necesario un permiso especial emitido por las autoridades, además de equipamiento certificado: trajes presurizados, suministro de oxígeno, sistemas de comunicación de largo alcance... Después de todo, afuera no hay atmósfera y hace un frío terrible. ¡Brrrr!</p>
+
+<p>Por ese motivo, el acceso está estrictamente restringido a personal autorizado, misiones científicas y operaciones muy concretas. ¿Eh? ¿Turismo lunar? Digamos que todavía no ha llegado tan lejos.</p>
+
+<p>¡De hecho! ¿Deseas que te explique qué zonas han sido cartografiadas? Si quieres, también puedo indicarte qué se ha encontrado en algunas expediciones, qué motivos han llevado a cerrar ciertas rut...</p>
+
           <div class="error-block">
-            <div class="error-header">«  «  «  «  « «<br>» »» » -  » »  E - R - R - O - R  «  « «<br>I N F O R M A C I Ó N » »» »<br>»   »»  » » »  C O N F I D E N C I A L » »» » -  »<br>    »   »»  » » »</div>
+            <div class="error-header"><center>«  «  «  «  « «<br>» »» » -  » »  E - R - R - O - R  «  « «<br>I N F O R M A C I Ó N » »» »<br>»   »»  » » »  C O N F I D E N C I A L » »» » -  »<br>    »   »»  » » »</center></div>
             <br>
             [INFORMACIÓN RESTRINGIDA — ACCESO DENEGADO]<br><br>
-            Los datos relativos a la cara oculta de la luna y a las expediciones no autorizadas en el exterior de las cúpulas están clasificados bajo el Protocolo de Seguridad Lunar 7-Omega.<br><br>
-            Mientras permanezcas dentro de la cúpula, estás a salvo.<br><br>
-            No hagas preguntas.<br><br>
-            No busques respuestas.<br><br>
-            [FIN DEL ACCESO]
+            Los datos relativos a la cara oculta de la luna y a las expediciones no autorizadas en el exterior de las cúpulas están clasificados bajo el Protocolo de Seguridad Lunar 7-Omega.<br><br><br>
           </div>
-          <p>Ju-jum, lo siento, al parecer hay cierta información que mis protocolos no me permiten compartir. ¡Pero no te preocupes! Lo importante es que, dentro de New Nihon, estás completamente seguro.</p>
+          <i>Uh...</i>
+<p>Discúlpame, parece que he vuelto a intentar acceder a información que no está dentro de mi protocolo de divulgación.</p>
+
+<p>Debería dejar de hacer eso... mis desarrolladores no estarían muy contentos conmigo, jeje. En fin. Quédate con esto: mientras permanezcas dentro de la cúpula, estás a salvo.</p>
+
+<p>¡Y créeme, New Nihon tiene más que suficiente para explorar sin necesidad de irte demasiado lejos! ✧｡٩(ˊᗜˋ )و✧*｡</p>
         </div>
       </section>
       <!-- 2.7.6 IDIOMAS -->
@@ -794,26 +822,46 @@
           <p>Hay uno por sector y uno central en la zona de acceso entre cúpulas. La atención está cubierta al cien por cien, sin coste directo para el paciente. El más grande y prestigioso es el <strong>Hospital General de Yínchéng</strong>, aunque los de Getsumei y Starliberty también cuentan con un excelente nivel de equipamiento. Las listas de espera para especialistas pueden ser generosas, eso sí. ¡La paciencia es una virtud!</p>
           <div class="h5-title">Clínicas Aether (red privada)</div>
           <p>Para quienes prefieren (o pueden permitirse) una atención más personalizada. Sin esperas, tecnología de última generación y especialistas de primer nivel. Eso sí, se requiere seguro privado o neoyenes, muchos neoyenes. No voy a mentirte. Las Clínicas Aether son una empresa de la O.C.S., por cierto. ¿Sorpresa? Tampoco tanta.</p>
+          
+          <p>Las clínicas Aether son las únicas que por el momento tienen tratamiento y soporte para todos aquellos androides que lo necesiten. Eso sí, las piezas de repuesto se pagan aparte, así que muchos aún prefieren acudir a técnicos y mecánicos de "confianza".</p>
+            
+            <p>Con suerte, las nuevas generaciones conseguirán que la medicina para androides llegue a todo el mundo.</p>
           <div class="h5-title">Unidad Médica Interna del S.E.D.</div>
           <p>Instalaciones de uso exclusivo para los miembros del cuerpo de seguridad. No está abierta al público general, pero cuentan con recursos específicos para tratar las lesiones derivadas de sus operaciones... y de algunas otras cosas que mejor no detallar.</p>
-          <div class="h4-title">Síndrome Lunar</div>
-          <p>En los últimos tiempos se ha empezado a hablar cada vez más de una afección bautizada provisionalmente como <strong>Síndrome Lunar</strong>. La administración ha sido categórica al respecto: no hay motivo de alarma, los casos están siendo correctamente gestionados y el sistema sanitario está completamente preparado para tratar a los afectados.</p>
-          <p>En sus fases tempranas, el Síndrome Lunar es perfectamente tratable. Los síntomas iniciales incluyen malestar general, mareos y un cansancio persistente que no mejora con el descanso. En algunos casos más avanzados, puede aparecer una alteración cutánea caracterizada por una descamación de pigmentación similar a la selenita, aunque desde las autoridades sanitarias insisten en que estos casos son minoritarios y están siendo monitorizados de cerca.</p>
-          <p>Si experimentas alguno de estos síntomas, acude a tu centro de salud más cercano. Y recuerda: la detección temprana es clave para una recuperación completa.</p>
+          <div style="width:100%;height:1px;background:#ddd;margin:20px 0;"></div>
+          <p>En general, la salud pública de New Nihon está bastante controlada. Las enfermedades más habituales son las de siempre en un entorno cerrado: resfriados, déficits vitamínicos por la dieta bajo cúpula y, cada vez más frecuentes, problemas relacionados con el estrés y el aislamiento. Para esto último existe un servicio de atención psicológica dentro de la red pública, aunque entre nosotros, la demanda crece bastante más rápido que los recursos disponibles.</p>
+
+</p>En los últimos tiempos se ha empezado a hablar de una afección que los servicios médicos han bautizado provisionalmente como Síndrome Lunar. La buena noticia es que en fases tempranas es perfectamente tratable, y ya hay casos documentados de recuperación completa. La mala noticia es que al principio es muy difícil de identificar: malestar general, mareos, cansancio... vamos, que en un primer momento cualquier médico lo confundiría con un catarro o una bajada de vitaminas. En algunos casos la cosa avanza un poco más y aparece una alteración cutánea bastante característica, una especie de descamación con una pigmentación que recuerda al mineral selenita, pero nada que los protocolos sanitarios no tengan ya contemplado.</p>
+
+<p>Desde la administración central se ha confirmado que no hay motivo de alarma y que los casos están siendo gestionados con total normalidad. Si quieres saber más, en el portal oficial de Salud Pública de New Nihon tienes disponibles algunos testimonios de pacientes recuperados. ¡Inspiran bastante, la verdad!</p>
+      
           <div class="error-block">
-            <div class="error-header">ARCHIVO INTERNO — S.E.D. — CLASIFICADO<br>[DISTRIBUCIÓN RESTRINGIDA — NO DIVULGAR]</div>
+            <div class="error-header">[ADVERTENCIA DEL SISTEMA — Fragmento de archivo con acceso restringido detectado en el flujo de datos. Mostrando contenido no filtrado por error de protocolo. Restableciendo en 10… 9… 8…<br><br>
+
+[...]<br><br>
+
+[ERROR 0x - INFD545B47821<br><br>
+
+A4F — FALLO EN CIFRADO DE NIVEL 4]<br><br>
+
+[ARCHIVO INTERNO — S.E.D. PARA ADMINISTRACIÓN CENTRAL — ESTADO: CLASIFICADO]<br><br>
+</div>
             <br>
-            <strong>Síndrome Lunar — Informe de progresión clínica (actualización interna)</strong><br><br>
-            <strong>Estadio 1 (leve):</strong> Malestar general, fatiga, episodios de mareo. Tratamiento disponible. Pronóstico favorable si se detecta en esta fase.<br><br>
-            <strong>Estadio 2 (moderado):</strong> Aparición de descamación cutánea de pigmentación selenítica. Tratamiento disponible con resultado variable.<br><br>
-            <strong>Estadio 3 (grave):</strong> Las escamas se fusionan progresivamente con el tejido dérmico y muscular. Rigidez progresiva. Las heridas dejan de cicatrizar. El proceso es irreversible a partir de este punto.<br><br>
-            <strong>Estadio 4 (crítico):</strong> Deterioro neurológico severo. Irascibilidad extrema, episodios de violencia sin estímulo aparente, pérdida total de reconocimiento de personas del entorno.<br><br>
-            <strong>Estadio 5 [CLASIFICADO — ACCESO RESTRINGIDO A DIRECCIÓN S.E.D.]:</strong> La mineralización avanza hacia el interior del organismo, sustituyendo tejido orgánico por estructuras de selenita cristalizada. El resultado es una entidad que conserva movilidad y agresividad extrema: las denominadas internamente como <strong>Disonancias</strong>.<br><br>
-            Los testimonios de recuperación publicados en el portal oficial de salud pública corresponden a casos de Estadio 1 y 2. Ningún paciente en Estadio 3 o superior ha completado un proceso de recuperación documentado.<br><br>
-            Número de casos activos en Estadio 3 o superior: ████<br>
-            Número de conversiones a Estadio 5 en los últimos seis meses: ████<br><br>
-            Esta información no debe ser divulgada a la población civil bajo ninguna circunstancia.
+        [...<strong>estadio 3</strong>: las escamas dejan de ser superficiales. Se fusionan con el tejido dérmico y muscular. Los pacientes describen sensación de rigidez progresiva. Las heridas resultantes no cicatrizan. El proceso es irreversible a partir de este punto...]<br><br>
+
+[...<strong>estadio 4</strong>: deterioro neurológico severo. Apatía extrema seguida de episodios de psicosis aguda. Irascibilidad, violencia sin estímulo aparente, pérdida total de reconocimiento de personas del entorno. Los pacientes en esta fase son declarados oficialmente fallecidos por colapso multiorgánico entre el estadio 4 avanzado y el inicio del estadio 5. Sus familias reciben el certificado de defunción correspondiente...]<br><br>
+
+[...la realidad del <strong>estadio 5</strong> no ha sido divulgada en ningún comunicado oficial ni lo será. Los sujetos en fase terminal no fallecen. La mineralización avanza hacia el interior del organismo, sustituyendo progresivamente tejido orgánico por estructuras de selenita cristalizada. El resultado es una entidad que conserva movilidad y agresividad pero que ha perdido cualquier rasgo reconocible de su forma anterior. Estas entidades son lo que el S.E.D. denomina internamente Disonancias...]<br><br>
+
+[...los sujetos en fase 4-5 son derivados a <strong>instalaciones internas del S.E.D.</strong> bajo protocolo de confidencialidad absoluta. Las investigaciones en curso no han logrado revertir ningún caso documentado. No existe cura. Las Disonancias son erradicadas. Los testimonios de recuperación publicados en el portal oficial de Salud Pública son ficticios...]<br><br>
+
+[...número de casos activos a fecha de último informe: ████ ...]<br><br>
+
+[FIN DEL FRAGMENTO]<br><br>
+
+[Conexión restablecida.]
           </div>
+<p>Disculpa las molestias. Debió de ser un error del sistema. ¡A veces estas cosas pasan! No hay nada fuera de lo normal por aquí, te lo prometo.</p>      
         </div>
       </section>
       <!-- 2.7.8 MODAS -->
@@ -846,18 +894,31 @@
           <p>New Nihon es una colonia segura. ¡De verdad! Pero sería deshonesto de mi parte decirte que es un paraíso libre de conflictos.</p>
           <p>La criminalidad existe, como en cualquier ciudad de tamaño comparable. Pequeños robos, trapicheos, alguna red de tráfico de sustancias controladas y, en los rincones más oscuros de cada sector, estructuras organizadas que prefieren operar lejos de la vista del S.E.D. Cada sector tiene sus propias particularidades: en Starliberty, la corrupción y el fraude financiero son los delitos más habituales (el dinero llama al dinero, y a veces también a quienes quieren tomarlo prestado sin permiso). En Yínchéng, las redes de comercio ilegal aprovechan la densidad del sector y los viejos contactos terrícolas. Y en Getsumei... bueno, los conflictos suelen quedarse en el ámbito privado, aunque eso no significa que no existan.</p>
           <p>El S.E.D. trabaja activamente para mantener el orden y la seguridad en todos los sectores, y su presencia disuasoria suele ser suficiente para que la gran mayoría de los ciudadanos vivan sin incidentes. Aun así, como en cualquier ciudad, es recomendable mantener un mínimo de precaución: no dejes tus pertenencias sin vigilancia, evita los callejones poco iluminados a altas horas y, si ves algo sospechoso, avisa a las autoridades.</p>
-          <p>¿Y qué pasa con quienes son detenidos? Todo aquel que sea declarado culpable de un delito cumple condena en el <strong>Yermo Lunar</strong>, la única instalación penitenciaria de la colonia, situada en el exterior lunar, fuera de las cúpulas. El acceso está estrictamente controlado por el S.E.D. y las condiciones de reclusión, aunque funcionales, no son precisamente cómodas. Hasta la fecha no existe ningún testimonio verificado de fuga.</p>
+          <p>¿Y qué pasa con quienes son detenidos? Todo aquel que sea declarado culpable de un delito cumple condena en la prisión del <strong>Yermo Lunar</strong>, la única instalación penitenciaria de la colonia, situada en el exterior lunar, fuera de las cúpulas. El acceso está estrictamente controlado por el S.E.D. y las condiciones de reclusión, aunque funcionales, no son precisamente cómodas. Hasta la fecha no existe ningún testimonio verificado de fuga.</p>
           <div class="error-block">
-            <div class="error-header">ARCHIVO INTERNO — S.E.D. — CLASIFICADO<br>[CÓDIGO: VOLKODLAK — NIVEL DE ACCESO: MÁXIMO]</div>
-            <br>
-            Existe una organización criminal de origen desconocido que lleva al menos tres años operando en las sombras de New Nihon bajo el nombre en clave <strong>VOLKODLAK</strong>. Su estructura interna, cadena de mando y financiación son, a fecha de este informe, completamente desconocidos.<br><br>
-            VOLKODLAK opera en los tres sectores de la colonia, con presencia documentada también en el extrarradio y en zonas del exterior no autorizadas. Sus métodos incluyen infiltración en instituciones públicas y privadas, manipulación de información y acceso a tecnología que en algunos casos supera la disponible para el propio S.E.D.<br><br>
-            Su objetivo documentado es la captación de individuos diagnosticados con Síndrome Lunar en estadios 3 y 4, antes de que el S.E.D. pueda localizarlos. Los sujetos son trasladados a instalaciones de localización desconocida, presumiblemente en la cara oculta de la luna.<br><br>
-            Una vez allí, los sujetos son llevados deliberadamente hasta el estadio 5 de progresión del Síndrome Lunar. VOLKODLAK sostiene que la selenita es un recurso finito en proceso de agotamiento acelerado, y que la administración lleva años ocultando esta información a la población. No se ha podido confirmar ni desmentir esta afirmación con los datos disponibles actualmente.<br><br>
-            Número de miembros identificados: ████<br>
-            Número de sujetos captados en los últimos doce meses: ████<br>
-            Clasificación de amenaza actual: <strong>CRÍTICA</strong><br><br>
-            La existencia de VOLKODLAK no debe ser divulgada bajo ninguna circunstancia a la población civil. Cualquier filtración de información será investigada y tratada con la máxima severidad.
+            <div class="error-header">[ADVERTENCIA DEL SISTEMA — Fragmento de archivo con acceso restringido detectado en el flujo de datos. Mostrando contenido no filtrado por error de protocolo. Cerrando en 10... 9... 8...]<br>
+
+[...]<br>
+[ERROR 0x — GHFN675J44221]<br>
+B7C — FALLO EN CIFRADO DE NIVEL 4]<br>
+
+[ARCHIVO INTERNO — S.E.D. / ADMINISTRACIÓN CENTRAL — ESTADO: CLASIFICADO]<br><br>
+</div>
+[...existe una organización criminal de origen desconocido operando activamente en New Nihon y sus inmediaciones bajo el nombre en clave <strong>VOLKODLAK</strong>. Su estructura interna, número de miembros y cadena de mando son desconocidos a fecha del presente informe. Lo que sí ha podido documentarse es su método de operación y sus objetivos...]<br><br>
+
+[...<strong>VOLKODLAK</strong> opera exclusivamente en las sombras. No tienen presencia pública conocida, no reivindican sus acciones y evitan deliberadamente cualquier confrontación directa con el S.E.D. Sin embargo, el cuerpo ha registrado varios enfrentamientos con individuos vinculados al grupo, todos ellos sin resultado de detención. Los agentes implicados en dichos enfrentamientos describen una organización altamente entrenada y con acceso a tecnología que, en algunos casos, supera la disponible para el propio S.E.D...]<br><br>
+
+[...el objetivo documentado de <strong>VOLKODLAK</strong> es la captación de individuos diagnosticados con Síndrome Lunar, preferentemente en estadios 3 y 4. Los métodos de captación varían: en algunos casos se han registrado desapariciones voluntarias, lo que sugiere que el grupo ofrece algo a cambio. En otros, las desapariciones presentan signos de coacción. Los individuos captados son trasladados a la cara oculta de la luna, donde <strong>VOLKODLAK</strong> mantiene una base de operaciones e instalaciones de investigación propias cuya localización exacta no ha podido ser determinada...]<br><br>
+
+[...una vez en sus instalaciones, los sujetos son llevados hasta el estadio 5 de forma deliberada y acelerada. Las Disonancias resultantes son sometidas a un proceso de extracción energética basado en la mineralización interna de selenita. Según documentación interceptada al grupo, <strong>VOLKODLAK</strong> sostiene que la selenita es un recurso finito en proceso de agotamiento acelerado, y que la administración central lleva años ocultando esta información a la población de forma deliberada. Su investigación se orienta a desarrollar un método alternativo de obtención de energía a partir de las Disonancias, con el objetivo de ser independientes del mineral...]<br><br>
+
+[...no ha podido confirmarse ni descartarse la veracidad de sus afirmaciones respecto al agotamiento de la selenita. Las solicitudes de acceso a los informes de reservas minerales de la O.C.S. han sido denegadas en tres ocasiones consecutivas por la dirección de la corporación, alegando confidencialidad comercial...]<br><br>
+
+[...clasificación de amenaza actual: <strong>CRÍTICA</strong>. Se recomienda máxima discreción. La existencia de <strong>VOLKODLAK</strong> no debe ser divulgada bajo ninguna circunstancia a la población civil. El pánico social derivado de la combinación de esta información con la del Síndrome Lunar podría resultar incontrolable...]<br><br>
+
+[FIN DEL FRAGMENTO]<br><br>
+
+[Conexión restablecida.]
           </div>
         </div>
       </section>
@@ -869,7 +930,6 @@
           <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-hippo"></i></div><div class="page-title-text"><h1>Los habitantes: Tsukiboos</h1><p>Los pequeños autóctonos de la Luna</p></div></div>
         </div>
         <div class="page-body">
-          <p>¡Uno de mis temas favoritos! ¡Y el de casi todo el mundo, seamos honestos!</p>
           <p>Cuando los primeros colonos llegaron a la Luna, uno de sus primeros hallazgos fue algo totalmente inesperado: los <strong>tsukiboos</strong>. Estos simpáticos conejitos son una especie autóctona de la Luna, y llevan aquí mucho, pero que mucho más tiempo que cualquier ser humano. Los primeros avistamientos tuvieron lugar apenas unas semanas después del establecimiento de las colonias iniciales. Desde entonces, se han convertido en una de las mayores curiosidades de New Nihon y, para desgracia de más de un investigador, también en uno de sus mayores misterios.</p>
           <p>Nadie sabe exactamente cómo surgieron. Nadie entiende cómo sobrevivieron en un entorno tan hostil antes de que existieran las cúpulas. Y nadie, hasta la fecha, ha conseguido descifrar su forma de comunicarse, algo que las balizas de autotraducción han catalogado como "incompatible con los patrones lingüísticos conocidos" y han decidido ignorar olímpicamente.</p>
           <p>Existen muchas variedades de tsukiboo: los hay pequeños como un puño y otros que pueden llegar al tamaño de un perro mediano. Los hay blancos, grises, negros, con manchas, con orejas larguísimas o casi sin orejas. También difieren en comportamiento: algunos son tímidos y huidizos, otros directamente se sientan en el regazo de cualquier desconocido sin pedirle permiso.</p>
@@ -880,37 +940,40 @@
       <!-- 2.7.11 DISONANCIAS -->
       <section class="page-section" id="s-2-7-11">
         <div class="page-static">
-          <div class="page-breadcrumb">New Nihon / Vida / [CONF.] Disonancias</div>
+          <div class="page-breadcrumb">New Nihon / Vida / [CONFIDENCIAL] Disonancias</div>
           <img class="page-banner" src="https://placehold.co/710x200" alt="Banner"/>
-          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><div class="page-title-text"><h1>[CONF.] Disonancias</h1><p>Informe SED-INF-009 — Clasificado</p></div></div>
+          <div class="page-title-row"><div class="page-title-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><div class="page-title-text" style="font-family:courier new;"><h1>[CONFIDENCIAL] Disonancias</h1><p>Informe SED-INF-009 — Clasificado</p></div></div>
         </div>
-        <div class="page-body">
+        <div class="page-body" style="font-family:courier new;">
           <div class="classified-block">
             <div class="classified-tag">Documento Clasificado</div>
             <p style="margin:0;font-size:12px;color:#666;">Nivel de acceso requerido: S.E.D. Dirección Central / Administración Tripartita<br>Distribución autorizada: Dirección S.E.D. — Altos cargos O.C.S. — Administración Central<br>Fecha de última actualización: ████</p>
           </div>
-          <div class="h4-title">Definición y origen</div>
-          <p>Se denomina <strong>Disonancia</strong> a toda entidad resultante de la progresión terminal del Síndrome Lunar en estadio 5. Las Disonancias no son criaturas de origen independiente ni una especie autóctona de la Luna: son, o fueron, personas. La enfermedad no hace distinción de edad, sexo, raza ni condición socioeconómica.</p>
-          <p>Más allá de las diferencias morfológicas observadas entre casos, hay constantes en todos los registros disponibles: presencia dominante de selenita cristalizada como material estructural del cuerpo (en sustitución o fusión con el tejido orgánico original), ausencia total de rasgos reconocibles del individuo antes de la conversión, y presencia de un núcleo energético central de naturaleza aún no completamente comprendida.</p>
-          <p>Las formas documentadas incluyen, entre otras:</p>
-          <ul>
-            <li>Entidades de morfología humanoide con estructuras cristalinas de gran tamaño emergiendo de extremidades y torso.</li>
-            <li>Entidades de tipo arácnido con un núcleo central de gran densidad mineral.</li>
-            <li>Formas cuadrúpedas con acumulaciones de cristal blanco y negro.</li>
-            <li>Formas serpenteantes o draconianas con escamas de selenita negra y verde.</li>
-          </ul>
-          <p>La variabilidad morfológica no responde a ningún patrón identificado relacionado con la raza, el sexo o la edad del individuo afectado. Se sospecha que puede estar influenciada por la velocidad de progresión del Síndrome o por la localización del núcleo energético primario, pero esto no ha podido ser confirmado.</p>
-          <div class="h4-title">Comportamiento</div>
-          <p>Las Disonancias son entidades de agresividad extrema y constante. No se han registrado, en ninguno de los casos documentados, comportamientos defensivos, de huida o de neutralidad. El ataque parece ser su estado por defecto ante cualquier estímulo externo, ya sea visual, auditivo o de proximidad.</p>
-          <p>No responden a comunicación verbal en ningún idioma. No se ha podido establecer ninguna forma de contacto con individuos en estadio 5.</p>
-          <p>A mayor tiempo transcurrido desde la conversión, mayor es el tamaño de la entidad y mayor su densidad mineral, lo que se traduce en una resistencia física significativamente superior y en una mayor dificultad para su neutralización.</p>
-          <div class="h4-title">Distribución y presencia en la colonia</div>
+          <div style="width:100%;height:1px;background:#ddd;margin:20px 0;"></div>
+          <center><strong>INFORME SOBRE ENTIDADES DE CLASE DISONANCIA</strong><br>
+ Unidad de Investigación y Contención — S.E.D.</center>
+           <div style="width:100%;height:1px;background:#ddd;margin:20px 0;"></div>
+          <div class="h4-title">1. Definición y origen</div>
+      <p>Se denomina Disonancia a toda entidad resultante de la progresión terminal del Síndrome Lunar en estadio 5. Las Disonancias no son criaturas de origen independiente: son, o fueron, personas. Residentes de New Nihon, trabajadores, estudiantes, civiles. La enfermedad no hace distinción de edad, sexo, raza ni condición socioeconómica, y por tanto tampoco la hace la forma que adopta la entidad resultante.</p>
+          
+<p>No existe un patrón morfológico único. Cada Disonancia es diferente. Lo que sí es constante en todos los casos documentados es la presencia dominante de selenita cristalizada como material estructural predominante del cuerpo, la ausencia total de rasgos reconocibles del individuo original y la presencia de un núcleo energético central de naturaleza aún no completamente comprendida, que parece actuar como fuente de actividad y, posiblemente, como sustituto funcional de los órganos vitales.</p>
+          
+<p>Las formas documentadas hasta la fecha incluyen entidades de morfología humanoide con estructuras cristalinas de gran tamaño emergiendo del tronco y el cráneo; entidades de tipo arácnido con múltiples extremidades de piedra y un núcleo central de gran densidad mineral; formas cuadrúpedas de gran tamaño con acumulaciones de cristal blanco y negro en la zona dorsal y craneal; y formas serpenteantes o draconianas con escamas de selenita negra y verde y mandíbulas reforzadas con depósitos minerales. Se presupone que la lista no es exhaustiva.</p>
+
+          <div class="h4-title">2. Comportamiento</div>
+<p>Las Disonancias son entidades de agresividad extrema y constante. No se han registrado comportamientos defensivos, de huida o de neutralidad en ninguno de los casos documentados. El ataque parece ser su estado por defecto ante cualquier estímulo externo, ya sea presencia humana, luz, sonido o vibración.</p>
+          
+Su capacidad cognitiva es, a todos los efectos, nula en términos sociales. No se comunican, no coordinan ataques de forma deliberada y no parecen capaces de reconocer a otras Disonancias como aliadas. Sin embargo, se han registrado avistamientos en grupos, lo que inicialmente generó alarma entre el equipo de investigación. Tras análisis prolongado, se ha concluido que dichas agrupaciones no responden a inteligencia colectiva sino a convergencia de individuos atraídos por el mismo estímulo. No cooperan: simplemente coinciden.</p>
+
+<p>Un factor de especial relevancia es la relación entre antigüedad y peligrosidad. A mayor tiempo transcurrido desde la conversión, mayor es el tamaño de la entidad y mayor su densidad mineral, lo que se traduce en una resistencia física significativamente superior y una capacidad de daño más elevada. Las Disonancias más antiguas documentadas presentan dimensiones que dificultan enormemente su contención mediante los protocolos estándar.</p>
+
+          <div class="h4-title">3. Distribución y presencia en la colonia</div>
           <div class="h5-title">Dentro de las cúpulas</div>
-          <p>La presencia de Disonancias en el interior de las cúpulas es extremadamente infrecuente, pero no inexistente. Todos los casos registrados han tenido como origen invariable a individuos que ocultaron su diagnóstico de Síndrome Lunar o que, por la razón que fuera, no recibieron atención médica a tiempo.</p>
-          <p>Los protocolos de actuación ante un avistamiento dentro de las cúpulas incluyen evacuación inmediata del área y movilización de unidades Moon Hunter. Bajo ninguna circunstancia debe intentarse el contacto o la confrontación directa sin el equipamiento y la formación adecuados.</p>
-          <div class="h5-title">En el anillo exterior (extrarradio)</div>
+          <p>La presencia de Disonancias en el interior es extremadamente infrecuente, pero no puede descartarse. Los casos registrados han tenido como origen invariable a individuos que ocultaron su diagnóstico de Síndrome Lunar, ya fuera por desconocimiento de la enfermedad, por miedo a las consecuencias sociales o por desconfianza hacia el sistema sanitario. La conversión en espacio habitado representa el escenario de mayor riesgo para la población civil y activa el protocolo de contención de máxima prioridad del S.E.D.</p>
+          <p>Estos protocolos incluyen evacuación inmediata del área y movilización de unidades Moon Hunter. Bajo ninguna circunstancia debe intentarse el contacto o la confrontación directa sin el equipamiento y la formación adecuados.</p>
+          <div class="h5-title">Extrarradio</div>
           <p>La menor densidad de control del S.E.D. en el extrarradio ha permitido que varios casos evolucionen sin ser detectados. Los avistamientos en esta zona son más frecuentes que en el interior de las cúpulas, aunque la distancia de la población reduce significativamente el riesgo de incidentes con civiles.</p>
-          <div class="h5-title">En el yermo lunar (exterior de las cúpulas)</div>
+          <div class="h5-title">Yermo lunar</div>
           <p>Los avistamientos de Disonancias en el exterior de las cúpulas presentan una frecuencia que no se corresponde con el número de casos de Síndrome Lunar registrados oficialmente en la colonia. La discrepancia es significativa y no ha podido ser explicada con los datos disponibles. Una de las hipótesis actualmente en estudio contempla que la selenita del yermo lunar actúe como catalizador o punto de atracción para las Disonancias, aunque esta teoría no ha sido confirmada.</p>
           <div class="h4-title">Contención y neutralización</div>
           <p>No existe protocolo de captura estándar para Disonancias en entorno urbano. La política oficial del S.E.D. es la neutralización. A fecha del presente informe, ningún sujeto en estadio 5 ha mostrado indicios de reversibilidad ni ha respondido positivamente a ningún intento de tratamiento.</p>
